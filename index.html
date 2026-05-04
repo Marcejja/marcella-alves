@@ -64,11 +64,11 @@ section{border-bottom:1px solid var(--line)}
 
 /* PHOTO GRID */
 #photos{background:var(--bg);padding:0;border:none}
-.photo-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:50vh 50vh;gap:1px;background:var(--bg3)}
-.pg-cell{overflow:hidden;position:relative;background:var(--bg2)}
+.photo-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto;gap:1px;background:var(--bg3)}
+.pg-cell{overflow:hidden;position:relative;background:var(--bg2);aspect-ratio:3/4}
+.pg-cell.tall{grid-row:span 2;aspect-ratio:auto}
 .pg-cell img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);opacity:0.65;transition:opacity 0.5s,transform 0.6s}
 .pg-cell:hover img{opacity:0.9;transform:scale(1.04)}
-.pg-cell.tall{grid-row:span 2}
 .pg-cell .cap{position:absolute;bottom:0;left:0;right:0;padding:1.2rem 1rem 0.7rem;background:linear-gradient(to top,rgba(0,0,0,0.7),transparent);font-size:0.5rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:rgba(244,242,237,0.6);opacity:0;transition:opacity 0.3s}
 .pg-cell:hover .cap{opacity:1}
 
@@ -222,14 +222,14 @@ footer p{font-size:0.58rem;font-weight:300;color:var(--muted);letter-spacing:0.1
     <h1 class="hero-name">
       <em>Marcella</em><br>Alves
     </h1>
-    <p class="hero-desc" data-pt="1995, sp" data-en="1995, sp">1995, sp</p>
+    <p class="hero-desc" data-pt="Psicóloga de formação. Gerente de Projetos e Operações na Nation. Facilitadora do programa Mulheres em Foco (Sebrae). Produtora executiva do SPFW. Gestora de projetos de moda e sustentabilidade." data-en="Psychology-trained. Project & Operations Manager at Nation. Facilitator of the Mulheres em Foco program (Sebrae). SPFW executive producer. Fashion and sustainability project manager.">Psicóloga de formação. Gerente de Projetos e Operações na Nation. Facilitadora do programa Mulheres em Foco (Sebrae). Produtora executiva do SPFW. Gestora de projetos de moda e sustentabilidade.</p>
     <div class="hero-btns">
       <a href="#experience" class="btn-solid" data-pt="ver trajetória" data-en="view experience">ver trajetória</a>
       <a href="#contact" class="btn-ghost" data-pt="contato" data-en="contact">contato</a>
     </div>
   </div>
   <div class="hero-right">
-    <img src="IMG_2112.jpeg" alt="Marcella Alves">
+    <img src="IMG_3600__1_.jpg" alt="Marcella Alves">
   </div>
 </section>
 
@@ -261,8 +261,8 @@ footer p{font-size:0.58rem;font-weight:300;color:var(--muted);letter-spacing:0.1
 <div id="photos">
   <div class="photo-grid">
     <div class="pg-cell tall">
-      <img src="1739194941772.jpeg" alt="Marcella Alves — y-Human">
-      <div class="cap">y-Human · Palestra</div>
+      <img src="IMG_5639.jpg" alt="Marcella Alves — y-Human">
+      <div class="cap">y-Human · São Paulo</div>
     </div>
     <div class="pg-cell">
       <img src="1744905905992.jpeg" alt="SPFW Piet">
@@ -273,12 +273,40 @@ footer p{font-size:0.58rem;font-weight:300;color:var(--muted);letter-spacing:0.1
       <div class="cap">Nation · Campanha</div>
     </div>
     <div class="pg-cell">
-      <img src="1747836410098.jpeg" alt="BRUFW">
-      <div class="cap">BR_IFW · Rio</div>
+      <img src="IMG_6554.jpg" alt="y-Human evento">
+      <div class="cap">y-Human · Evento</div>
+    </div>
+    <div class="pg-cell">
+      <img src="1739194941772.jpeg" alt="Palestra">
+      <div class="cap">y-Human · Palestra</div>
+    </div>
+    <div class="pg-cell tall">
+      <img src="IMG_6470.jpg" alt="Marcella Alves">
+      <div class="cap">y-Human</div>
+    </div>
+    <div class="pg-cell">
+      <img src="IMG_3661__1_.jpg" alt="Evento y-Human plateia">
+      <div class="cap">y-Human · Patrimônio Histórico</div>
     </div>
     <div class="pg-cell">
       <img src="1744905897634.jpeg" alt="Público SPFW">
       <div class="cap">SPFW · Pacaembu</div>
+    </div>
+    <div class="pg-cell">
+      <img src="IMG_5557.jpg" alt="Reunião">
+      <div class="cap">y-Human · Reunião</div>
+    </div>
+    <div class="pg-cell">
+      <img src="IMG_6524.jpg" alt="Equipe y-Human">
+      <div class="cap">y-Human · Equipe</div>
+    </div>
+    <div class="pg-cell">
+      <img src="1747836410098.jpeg" alt="BRUFW">
+      <div class="cap">BR_IFW · Rio</div>
+    </div>
+    <div class="pg-cell">
+      <img src="IMG_2113.jpeg" alt="Marcella bastidores">
+      <div class="cap">y-Human · Bastidores</div>
     </div>
   </div>
 </div>
@@ -659,7 +687,7 @@ footer p{font-size:0.58rem;font-weight:300;color:var(--muted);letter-spacing:0.1
       <h2 class="big-title">
         <em>Vamos</em><br>conversar?
       </h2>
-      <p class="contact-p" data-pt="." data-en=".">.</p>
+      <p class="contact-p" data-pt="Aberta a novas oportunidades em gestão de projetos, operações e produção executiva." data-en="Open to new opportunities in project management, operations, and executive production.">Aberta a novas oportunidades em gestão de projetos, operações e produção executiva.</p>
     </div>
     <div class="c-cards reveal">
       <a href="mailto:contato.marcejja@gmail.com" class="c-card">
