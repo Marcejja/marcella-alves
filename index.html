@@ -5,196 +5,196 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Marcella Alves</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-:root {
-  --bg: #FFFFFF;
-  --bg2: #F2F2F2;
-  --bg3: #E5E5E5;
-  --accent: #C0392B;
-  --text: #0A0A0A;
-  --muted: #555555;
-  --line: rgba(0,0,0,0.1);
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#080808;
+  --bg2:#111111;
+  --bg3:#1A1A1A;
+  --white:#F4F2ED;
+  --muted:#6A6760;
+  --line:rgba(244,242,237,0.09);
 }
-body { font-family: 'Barlow', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden}
 
 /* NAV */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 1.2rem 5vw;
-  background: rgba(255,255,255,0.97); backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--line);
-}
-.nav-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text); text-decoration: none; }
-.nav-links { display: flex; gap: 2.2rem; list-style: none; }
-.nav-links a { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-.nav-links a:hover { color: var(--text); }
-.nav-right { display: flex; align-items: center; gap: 0.8rem; }
-.lang-wrap { display: flex; gap: 0.3rem; }
-.lang-btn { background: none; border: 1px solid var(--line); padding: 0.22rem 0.5rem; border-radius: 1px; cursor: pointer; color: var(--muted); font-family: 'Barlow', sans-serif; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.12em; transition: all 0.2s; }
-.lang-btn.active { background: var(--text); border-color: var(--text); color: #fff; }
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 5vw;background:rgba(8,8,8,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-logo{font-family:'Cormorant',serif;font-size:1.15rem;font-weight:400;letter-spacing:0.06em;color:var(--white);text-decoration:none}
+.nav-links{display:flex;gap:2.2rem;list-style:none}
+.nav-links a{font-size:0.6rem;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--white)}
+.lang-wrap{display:flex;gap:0.3rem}
+.lang-btn{background:none;border:1px solid var(--line);padding:0.22rem 0.5rem;cursor:pointer;color:var(--muted);font-family:'Barlow',sans-serif;font-size:0.6rem;font-weight:400;letter-spacing:0.1em;transition:all 0.2s}
+.lang-btn.active{background:var(--white);border-color:var(--white);color:var(--bg)}
 
 /* HERO */
-#hero {
-  min-height: 100vh; display: flex; flex-direction: column;
-  justify-content: flex-end; padding: 12vh 5vw 8vh;
-  position: relative; border-bottom: 1px solid var(--line); overflow: hidden;
-}
-.hero-photo-wrap {
-  position: absolute; top: 0; right: 0; bottom: 0;
-  width: 40vw; max-width: 560px; overflow: hidden;
-}
-.hero-photo-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top center; filter: grayscale(100%); }
-.hero-photo-wrap::after {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(to right, #fff 0%, rgba(255,255,255,0.2) 30%, transparent 55%, #fff 100%),
-              linear-gradient(to bottom, transparent 50%, #fff 100%);
-}
-.hero-photo-credit {
-  position: absolute; bottom: 0.8rem; right: 0.8rem;
-  font-size: 0.54rem; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--muted); opacity: 0.5; z-index: 2;
-}
-.hero-eyebrow { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem; opacity: 0; animation: fadeUp 0.6s ease 0.2s forwards; position: relative; z-index: 2; }
-.hero-headline {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(4rem, 10vw, 10rem);
-  font-weight: 800;
-  line-height: 0.92;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-  color: var(--text);
-  opacity: 0; animation: fadeUp 0.7s ease 0.4s forwards;
-  position: relative; z-index: 2;
-  margin-bottom: 4rem;
-}
-.hero-headline em { font-style: normal; color: var(--accent); }
-.hero-body { display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: end; opacity: 0; animation: fadeUp 0.7s ease 0.7s forwards; position: relative; z-index: 2; }
-.hero-text p { font-size: 0.9rem; font-weight: 300; line-height: 1.85; color: var(--muted); margin-bottom: 1rem; max-width: 600px; }
-.hero-text p:last-child { margin-bottom: 0; }
-.hero-cta-group { display: flex; flex-direction: column; align-items: flex-end; gap: 0.8rem; flex-shrink: 0; }
-.hero-location { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
-.hero-btns { display: flex; gap: 0.6rem; }
-.btn-solid { background: var(--text); color: #fff; border: 2px solid var(--text); padding: 0.8rem 1.8rem; font-family: 'Barlow', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; border-radius: 1px; transition: all 0.2s; }
-.btn-solid:hover { background: transparent; color: var(--text); }
-.btn-outline-dark { border: 2px solid var(--text); color: var(--text); background: none; padding: 0.8rem 1.8rem; font-family: 'Barlow', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; border-radius: 1px; transition: all 0.2s; display: flex; align-items: center; gap: 0.4rem; }
-.btn-outline-dark:hover { background: var(--text); color: #fff; }
-.btn-outline-dark svg { width: 13px; height: 13px; }
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;border-bottom:1px solid var(--line);overflow:hidden}
 
-/* PILLS */
-.hero-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 2rem; max-width: 600px; }
-.pill { border: 1px solid var(--line); padding: 0.3rem 0.8rem; border-radius: 100px; font-size: 0.65rem; font-weight: 500; color: var(--muted); letter-spacing: 0.04em; transition: all 0.2s; text-transform: none; }
-.pill:hover { border-color: var(--text); color: var(--text); }
+.hero-left{display:flex;flex-direction:column;justify-content:flex-end;padding:12vh 5vw 8vh;position:relative;z-index:2}
+.hero-eyebrow{font-size:0.58rem;font-weight:400;letter-spacing:0.28em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.6s ease 0.2s forwards}
+.hero-name{font-family:'Cormorant',serif;font-size:clamp(4rem,7vw,8rem);font-weight:300;line-height:0.9;letter-spacing:-0.01em;color:var(--white);opacity:0;animation:fadeUp 0.7s ease 0.4s forwards;margin-bottom:3.5rem}
+.hero-name em{font-style:italic}
+.hero-desc{font-size:0.88rem;font-weight:300;line-height:1.85;color:rgba(244,242,237,0.5);max-width:420px;margin-bottom:2.5rem;opacity:0;animation:fadeUp 0.7s ease 0.6s forwards}
+.hero-btns{display:flex;gap:0.6rem;opacity:0;animation:fadeUp 0.7s ease 0.75s forwards}
+.btn-solid{background:var(--white);color:var(--bg);border:1px solid var(--white);padding:0.8rem 2rem;font-family:'Barlow',sans-serif;font-size:0.6rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;transition:all 0.2s}
+.btn-solid:hover{background:transparent;color:var(--white)}
+.btn-ghost{background:none;color:var(--white);border:1px solid var(--line);padding:0.8rem 2rem;font-family:'Barlow',sans-serif;font-size:0.6rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;transition:all 0.2s}
+.btn-ghost:hover{border-color:var(--white)}
+
+.hero-right{position:relative;overflow:hidden}
+.hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(100%) contrast(1.1);opacity:0.6}
+.hero-right::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,transparent 20%),linear-gradient(to top,var(--bg) 0%,transparent 30%)}
+
+/* MARQUEE */
+.marquee-wrap{border-bottom:1px solid var(--line);border-top:1px solid var(--line);padding:0.8rem 0;overflow:hidden;background:var(--bg2)}
+.marquee-track{display:flex;white-space:nowrap;animation:marquee 30s linear infinite}
+.marquee-item{font-family:'Cormorant',serif;font-size:1.1rem;font-weight:300;font-style:italic;letter-spacing:0.06em;color:rgba(244,242,237,0.3);padding:0 2rem;flex-shrink:0}
+.marquee-sep{color:rgba(244,242,237,0.12);padding:0 0.5rem}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* SECTIONS */
-section { border-bottom: 1px solid var(--line); }
-.section-inner { max-width: 1200px; margin: 0 auto; padding: 8rem 5vw; }
-.section-tag { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--accent); margin-bottom: 3rem; display: flex; align-items: center; gap: 1rem; }
-.section-tag::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
-.headline-mix { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2.5rem, 5vw, 5rem); font-weight: 800; line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; color: var(--text); margin-bottom: 3rem; }
-.headline-mix em { font-style: normal; color: var(--accent); }
+section{border-bottom:1px solid var(--line)}
+.section-inner{max-width:1280px;margin:0 auto;padding:8rem 5vw}
+.s-tag{font-size:0.55rem;font-weight:400;letter-spacing:0.32em;text-transform:uppercase;color:var(--muted);margin-bottom:2.5rem;display:flex;align-items:center;gap:1rem}
+.s-tag::before{content:'';width:20px;height:1px;background:var(--muted)}
+.big-title{font-family:'Cormorant',serif;font-size:clamp(3rem,6.5vw,7.5rem);font-weight:300;line-height:0.92;letter-spacing:-0.01em;color:var(--white);margin-bottom:4rem}
+.big-title em{font-style:italic}
+
+/* PHOTO GRID */
+#photos{background:var(--bg);padding:0;border:none}
+.photo-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:50vh 50vh;gap:1px;background:var(--bg3)}
+.pg-cell{overflow:hidden;position:relative;background:var(--bg2)}
+.pg-cell img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);opacity:0.65;transition:opacity 0.5s,transform 0.6s}
+.pg-cell:hover img{opacity:0.9;transform:scale(1.04)}
+.pg-cell.tall{grid-row:span 2}
+.pg-cell .cap{position:absolute;bottom:0;left:0;right:0;padding:1.2rem 1rem 0.7rem;background:linear-gradient(to top,rgba(0,0,0,0.7),transparent);font-size:0.5rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:rgba(244,242,237,0.6);opacity:0;transition:opacity 0.3s}
+.pg-cell:hover .cap{opacity:1}
+
+/* ABOUT */
+#about{background:var(--bg2)}
+#about .section-inner{display:grid;grid-template-columns:1fr 1.6fr;gap:8rem;align-items:start}
+.about-text p{font-size:0.9rem;font-weight:300;line-height:1.9;color:rgba(244,242,237,0.55);margin-bottom:1.3rem}
+.about-text p strong{color:var(--white);font-weight:400}
+.about-pills{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:2rem}
+.pill{border:1px solid var(--line);padding:0.28rem 0.7rem;font-size:0.6rem;font-weight:300;color:var(--muted);letter-spacing:0.06em;transition:all 0.2s}
+.pill:hover{border-color:rgba(244,242,237,0.4);color:var(--white)}
 
 /* EXPERIENCE */
-#experience { background: var(--bg2); }
-.exp-list { display: flex; flex-direction: column; }
-.exp-item { display: grid; grid-template-columns: 160px 1fr; gap: 3rem; padding: 3.5rem 0; border-top: 1px solid var(--line); opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
-.exp-item.visible { opacity: 1; transform: translateY(0); }
-.exp-date { font-size: 0.65rem; font-weight: 500; color: var(--muted); padding-top: 0.3rem; letter-spacing: 0.04em; }
-.exp-co { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
-.exp-role { font-family: 'Barlow Condensed', sans-serif; font-size: 1.8rem; font-weight: 700; text-transform: uppercase; color: var(--text); line-height: 1.1; margin-bottom: 1rem; letter-spacing: 0.01em; }
-.exp-desc { font-size: 0.85rem; font-weight: 300; line-height: 1.88; color: var(--muted); max-width: 640px; }
-.exp-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1rem; }
-.tag { font-size: 0.58rem; letter-spacing: 0.1em; color: var(--muted); border: 1px solid var(--line); padding: 0.15rem 0.5rem; border-radius: 1px; font-weight: 500; text-transform: uppercase; }
+#experience{background:var(--bg)}
+.exp-list{display:flex;flex-direction:column}
+.exp-item{display:grid;grid-template-columns:180px 1fr;gap:3rem;padding:3.5rem 0;border-top:1px solid var(--line);opacity:0;transform:translateY(16px);transition:all 0.6s ease}
+.exp-item.visible{opacity:1;transform:translateY(0)}
+.exp-date{font-size:0.62rem;font-weight:300;color:var(--muted);padding-top:0.4rem;letter-spacing:0.04em;line-height:1.6}
+.exp-co{font-size:0.55rem;font-weight:400;letter-spacing:0.26em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem}
+.exp-role{font-family:'Cormorant',serif;font-size:1.9rem;font-weight:400;color:var(--white);line-height:1.05;margin-bottom:1rem;letter-spacing:0.01em}
+.exp-body{font-size:0.83rem;font-weight:300;line-height:1.9;color:rgba(244,242,237,0.5);max-width:680px}
+.exp-body p{margin-bottom:0.7rem}
+.exp-body ul{padding-left:1.1rem;margin-top:0.3rem}
+.exp-body li{margin-bottom:0.5rem}
+.exp-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-top:1rem}
+.tag{font-size:0.5rem;letter-spacing:0.12em;color:var(--muted);border:1px solid var(--line);padding:0.12rem 0.45rem;font-weight:400;text-transform:uppercase}
 
-/* ARTICLES */
-#articles { background: var(--bg); }
-.articles-intro { font-size: 0.92rem; font-weight: 300; line-height: 1.9; color: var(--muted); max-width: 560px; margin-bottom: 4rem; }
-.articles-grid { display: flex; flex-direction: column; }
-.article-item { border-top: 1px solid var(--line); padding: 2.5rem 0; opacity: 0; transform: translateY(20px); transition: all 0.6s ease; cursor: pointer; }
-.article-item.visible { opacity: 1; transform: translateY(0); }
-.article-item:last-child { border-bottom: 1px solid var(--line); }
-.article-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; }
-.article-meta { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; font-weight: 600; }
-.article-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.4rem, 2.5vw, 2.2rem); font-weight: 700; text-transform: uppercase; color: var(--text); line-height: 1.05; margin-bottom: 0.7rem; letter-spacing: 0.01em; transition: color 0.2s; }
-.article-item:hover .article-title { color: var(--accent); }
-.article-excerpt { font-size: 0.82rem; font-weight: 300; line-height: 1.8; color: var(--muted); max-width: 660px; }
-.article-toggle { flex-shrink: 0; width: 28px; height: 28px; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; transition: all 0.3s; margin-top: 0.2rem; }
-.article-item:hover .article-toggle { border-color: var(--text); }
-.article-toggle svg { width: 10px; height: 10px; stroke: var(--text); transition: transform 0.3s; }
-.article-item.open .article-toggle svg { transform: rotate(45deg); }
-.article-full { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
-.article-full-inner { padding-top: 1.8rem; }
-.article-full-inner p { font-size: 0.87rem; font-weight: 300; line-height: 1.95; color: var(--muted); margin-bottom: 1.1rem; }
-.article-note { font-size: 0.73rem !important; color: var(--accent) !important; font-style: italic; }
-.article-media { display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1.4rem 0; }
-.article-media img { height: 190px; width: auto; object-fit: cover; flex: 1; min-width: 130px; max-width: 250px; }
-.article-media.single img { height: 290px; max-width: 100%; width: 100%; }
+/* BASTIDORES */
+#bastidores{background:var(--bg2)}
+.bast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bg3);margin-top:4rem}
+.bast-cell{overflow:hidden;aspect-ratio:4/3}
+.bast-cell img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);opacity:0.6;transition:all 0.4s}
+.bast-cell:hover img{opacity:0.9;transform:scale(1.04)}
+
+/* WRITING */
+#articles{background:var(--bg)}
+.articles-list{display:flex;flex-direction:column;margin-top:1rem}
+.art-item{border-top:1px solid var(--line);opacity:0;transform:translateY(12px);transition:all 0.5s ease}
+.art-item.visible{opacity:1;transform:translateY(0)}
+.art-item:last-child{border-bottom:1px solid var(--line)}
+.art-header{display:flex;justify-content:space-between;align-items:center;padding:2rem 0;cursor:pointer;gap:2rem}
+.art-meta{font-size:0.5rem;font-weight:400;letter-spacing:0.24em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem}
+.art-title{font-family:'Cormorant',serif;font-size:clamp(1.4rem,2.5vw,2.3rem);font-weight:400;color:var(--white);line-height:1.05;transition:color 0.2s;letter-spacing:0.01em}
+.art-item:hover .art-title{color:rgba(244,242,237,0.65)}
+.art-toggle{flex-shrink:0;width:26px;height:26px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:all 0.3s}
+.art-item:hover .art-toggle{border-color:rgba(244,242,237,0.3)}
+.art-toggle svg{width:9px;height:9px;stroke:var(--white);transition:transform 0.3s}
+.art-item.open .art-toggle svg{transform:rotate(45deg)}
+.art-body{max-height:0;overflow:hidden;transition:max-height 0.5s ease}
+.art-body-inner{padding-bottom:2.5rem;border-top:1px solid var(--line);padding-top:1.8rem}
+.art-body-inner p{font-size:0.87rem;font-weight:300;line-height:1.95;color:rgba(244,242,237,0.5);margin-bottom:1rem;max-width:720px}
+.art-body-inner .note{font-size:0.72rem;color:rgba(244,242,237,0.35);font-style:italic}
+.art-media{display:flex;gap:0.5rem;margin:1.2rem 0;flex-wrap:wrap}
+.art-media img{height:180px;object-fit:cover;flex:1;min-width:120px;max-width:250px;filter:grayscale(100%)}
+.art-media.single img{height:260px;max-width:100%;width:100%;filter:grayscale(100%)}
 
 /* TALKS */
-#talks { background: var(--bg2); }
-.talks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 4rem; }
-.talk-card { background: var(--bg); border: 1px solid var(--line); padding: 2rem; position: relative; overflow: hidden; opacity: 0; transform: translateY(16px); transition: all 0.5s ease; }
-.talk-card.visible { opacity: 1; transform: translateY(0); }
-.talk-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--text); }
-.talk-event { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.8rem; font-weight: 600; }
-.talk-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; text-transform: uppercase; color: var(--text); line-height: 1.1; margin-bottom: 0.6rem; }
-.talk-desc { font-size: 0.78rem; font-weight: 300; line-height: 1.7; color: var(--muted); }
-.talk-img { width: 100%; height: 320px; object-fit: cover; object-position: center top; margin-bottom: 1.4rem; filter: grayscale(30%); }
+#talks{background:var(--bg2)}
+.talks-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:4rem;background:var(--bg3)}
+.talk-card{background:var(--bg2);overflow:hidden;opacity:0;transform:translateY(16px);transition:all 0.5s ease}
+.talk-card.visible{opacity:1;transform:translateY(0)}
+.talk-img{width:100%;height:260px;object-fit:cover;object-position:center 30%;filter:grayscale(100%);opacity:0.6;display:block;transition:all 0.4s}
+.talk-card:hover .talk-img{opacity:0.85}
+.talk-body{padding:1.8rem}
+.talk-event{font-size:0.5rem;font-weight:400;letter-spacing:0.24em;text-transform:uppercase;color:var(--muted);margin-bottom:0.7rem}
+.talk-title{font-family:'Cormorant',serif;font-size:1.4rem;font-weight:400;color:var(--white);line-height:1.1;margin-bottom:0.8rem}
+.talk-desc{font-size:0.78rem;font-weight:300;line-height:1.75;color:rgba(244,242,237,0.45)}
 
 /* EDUCATION */
-.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 4rem; }
-.edu-card { background: var(--bg2); border: 1px solid var(--line); padding: 2rem; position: relative; overflow: hidden; opacity: 0; transform: translateY(16px); transition: all 0.5s ease; }
-.edu-card.visible { opacity: 1; transform: translateY(0); }
-.edu-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--text); }
-.edu-year { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.8rem; font-weight: 600; }
-.edu-degree { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; text-transform: uppercase; color: var(--text); line-height: 1.1; margin-bottom: 0.4rem; }
-.edu-school { font-size: 0.73rem; font-weight: 300; color: var(--muted); }
+#education{background:var(--bg)}
+#education .section-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
+.edu-stack{display:flex;flex-direction:column;gap:1px;background:var(--line)}
+.edu-card{background:var(--bg);padding:2rem;border-left:1px solid rgba(244,242,237,0.2);opacity:0;transform:translateY(12px);transition:all 0.5s ease}
+.edu-card.visible{opacity:1;transform:translateY(0)}
+.edu-year{font-size:0.5rem;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);margin-bottom:0.8rem}
+.edu-degree{font-family:'Cormorant',serif;font-size:1.3rem;font-weight:400;color:var(--white);line-height:1.1;margin-bottom:0.4rem}
+.edu-school{font-size:0.72rem;font-weight:300;color:var(--muted)}
 
 /* SKILLS */
-#skills { background: var(--bg); }
-.skills-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 4rem; }
-.skill-group h3 { font-size: 0.58rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.6rem; padding-bottom: 0.7rem; border-bottom: 1px solid var(--line); font-weight: 600; }
-.skill-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
-.skill-list li { font-size: 0.82rem; font-weight: 300; color: var(--muted); display: flex; align-items: center; gap: 0.7rem; }
-.skill-list li::before { content: ''; width: 10px; height: 1px; background: var(--text); flex-shrink: 0; }
+#skills{background:var(--bg2)}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4rem;margin-top:4rem}
+.sk-group h3{font-size:0.5rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;padding-bottom:0.6rem;border-bottom:1px solid var(--line);font-weight:400}
+.sk-list{list-style:none;display:flex;flex-direction:column;gap:0.7rem}
+.sk-list li{font-size:0.82rem;font-weight:300;color:rgba(244,242,237,0.45);display:flex;align-items:center;gap:0.6rem}
+.sk-list li::before{content:'';width:8px;height:1px;background:rgba(244,242,237,0.25);flex-shrink:0}
 
 /* CONTACT */
-#contact .section-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-.contact-left .headline-mix { margin-bottom: 1.4rem; }
-.contact-left p { font-size: 0.88rem; font-weight: 300; line-height: 1.82; color: var(--muted); }
-.contact-cards { display: flex; flex-direction: column; gap: 0.8rem; }
-.contact-card { display: flex; align-items: center; gap: 1rem; background: var(--bg2); border: 1px solid var(--line); padding: 1rem 1.3rem; text-decoration: none; transition: all 0.2s; }
-.contact-card:hover { border-color: var(--text); transform: translateX(4px); }
-.cc-icon { width: 32px; height: 32px; background: var(--bg); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.cc-icon svg { width: 13px; height: 13px; }
-.cc-label { font-size: 0.56rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.15rem; font-weight: 600; }
-.cc-value { font-size: 0.8rem; font-weight: 300; color: var(--text); }
+#contact{background:var(--bg)}
+#contact .section-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.contact-p{font-size:0.9rem;font-weight:300;line-height:1.85;color:rgba(244,242,237,0.45)}
+.c-cards{display:flex;flex-direction:column;gap:1px;background:var(--line)}
+.c-card{display:flex;align-items:center;gap:1rem;background:var(--bg2);padding:1.1rem 1.3rem;text-decoration:none;transition:all 0.2s}
+.c-card:hover{background:var(--white)}
+.c-card:hover .c-label,.c-card:hover .c-val{color:rgba(8,8,8,0.5)}
+.c-card:hover .c-val{color:var(--bg)}
+.c-icon{width:30px;height:30px;background:var(--bg3);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s}
+.c-card:hover .c-icon{background:rgba(8,8,8,0.1)}
+.c-icon svg{width:13px;height:13px}
+.c-label{font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.1rem;font-weight:400;transition:color 0.2s}
+.c-val{font-size:0.78rem;font-weight:300;color:var(--white);transition:color 0.2s}
 
-footer { background: var(--text); padding: 1.8rem 5vw; display: flex; justify-content: space-between; align-items: center; }
-footer p { font-size: 0.65rem; font-weight: 400; color: rgba(255,255,255,0.35); letter-spacing: 0.1em; text-transform: uppercase; }
+footer{background:var(--bg2);padding:1.5rem 5vw;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line)}
+footer p{font-size:0.58rem;font-weight:300;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase}
 
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
-@media (max-width: 860px) {
-  nav { padding: 1rem 5vw; }
-  .nav-links { display: none; }
-  .section-inner { padding: 5rem 5vw; }
-  #hero { padding: 8vh 5vw 6vh; }
-  .hero-photo-wrap { display: none; }
-  .hero-body { grid-template-columns: 1fr; gap: 2rem; }
-  .hero-cta-group { align-items: flex-start; }
-  .hero-btns { flex-direction: column; }
-  .exp-item { grid-template-columns: 1fr; gap: 0.3rem; }
-  .edu-grid, .talks-grid { grid-template-columns: 1fr; }
-  .skills-cols { grid-template-columns: 1fr 1fr; gap: 2rem; }
-  #contact .section-inner { grid-template-columns: 1fr; gap: 3rem; }
-  footer { flex-direction: column; gap: 0.5rem; text-align: center; }
-  .article-media img { height: 120px; }
+@media(max-width:900px){
+  nav{padding:0.9rem 5vw}
+  .nav-links{display:none}
+  #hero{grid-template-columns:1fr}
+  .hero-right{height:70vw}
+  .hero-left{padding:9vh 5vw 5vh}
+  .section-inner{padding:5rem 5vw}
+  .photo-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .pg-cell.tall{grid-row:span 1}
+  #about .section-inner{grid-template-columns:1fr;gap:3rem}
+  .about-photo{aspect-ratio:4/3}
+  .exp-item{grid-template-columns:1fr;gap:0.3rem}
+  .bast-grid{grid-template-columns:1fr 1fr}
+  .talks-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
+  #education .section-inner{grid-template-columns:1fr}
+  #contact .section-inner{grid-template-columns:1fr;gap:3rem}
+  footer{flex-direction:column;gap:0.4rem}
 }
 </style>
 </head>
@@ -203,307 +203,351 @@ footer p { font-size: 0.65rem; font-weight: 400; color: rgba(255,255,255,0.35); 
 <nav>
   <a href="#hero" class="nav-logo">Marcella Alves</a>
   <ul class="nav-links">
+    <li><a href="#about" data-pt="Sobre" data-en="About">Sobre</a></li>
     <li><a href="#experience" data-pt="Experiência" data-en="Experience">Experiência</a></li>
     <li><a href="#articles" data-pt="Escrita" data-en="Writing">Escrita</a></li>
     <li><a href="#talks" data-pt="Palestras" data-en="Talks">Palestras</a></li>
-    <li><a href="#education" data-pt="Formação" data-en="Education">Formação</a></li>
     <li><a href="#contact" data-pt="Contato" data-en="Contact">Contato</a></li>
   </ul>
-  <div class="nav-right">
-    <div class="lang-wrap">
-      <button class="lang-btn active" onclick="setLang('pt')">PT</button>
-      <button class="lang-btn" onclick="setLang('en')">EN</button>
-    </div>
+  <div class="lang-wrap">
+    <button class="lang-btn active" onclick="setLang('pt')">PT</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
   </div>
 </nav>
 
+<!-- HERO -->
 <section id="hero">
-  <div class="hero-photo-wrap">
-    <img src="1742307337735.jpeg" alt="Marcella Alves">
-    <span class="hero-photo-credit">Vestindo coleção Rituals and Thanksgiving by Lorena Haguiara · Foto: Chris Maldonado</span>
+  <div class="hero-left">
+    <p class="hero-eyebrow" data-pt="São Paulo · Gestão · Operações · Impacto" data-en="São Paulo · Management · Operations · Impact">São Paulo · Gestão · Operações · Impacto</p>
+    <h1 class="hero-name">
+      <em>Marcella</em><br>Alves
+    </h1>
+    <p class="hero-desc" data-pt="Psicóloga de formação. Gerente de Projetos e Operações na Nation. Facilitadora do programa Mulheres em Foco (Sebrae). Produtora executiva do SPFW. Gestora de projetos de moda e sustentabilidade." data-en="Psychology-trained. Project & Operations Manager at Nation. Facilitator of the Mulheres em Foco program (Sebrae). SPFW executive producer. Fashion and sustainability project manager.">Psicóloga de formação. Gerente de Projetos e Operações na Nation. Facilitadora do programa Mulheres em Foco (Sebrae). Produtora executiva do SPFW. Gestora de projetos de moda e sustentabilidade.</p>
+    <div class="hero-btns">
+      <a href="#experience" class="btn-solid" data-pt="ver trajetória" data-en="view experience">ver trajetória</a>
+      <a href="#contact" class="btn-ghost" data-pt="contato" data-en="contact">contato</a>
+    </div>
   </div>
-  <p class="hero-eyebrow" data-pt="Psicologia · Gestão · Impacto" data-en="Psychology · Management · Impact">Psicologia · Gestão · Impacto</p>
-  <h1 class="hero-headline">
-    <span data-pt="pessoas," data-en="people,">pessoas,</span><br>
-    <em><span data-pt="processos," data-en="processes,">processos,</span></em><br>
-    <span data-pt="propósito." data-en="purpose.">propósito.</span>
-  </h1>
-  <div class="hero-body">
-    <div class="hero-text">
-      <p data-pt="Sou psicóloga de formação pelo Mackenzie, com pós-graduação em Psicologia Jurídica pela PUC-RJ, e atuo há anos na interseção entre comportamento humano, gestão de projetos e produção executiva." data-en="I hold a Psychology degree from Mackenzie and a postgraduate in Legal Psychology from PUC-RJ, and I have worked for years at the intersection of human behavior, project management, and executive production.">Sou psicóloga de formação pelo Mackenzie, com pós-graduação em Psicologia Jurídica pela PUC-RJ, e atuo há anos na interseção entre comportamento humano, gestão de projetos e produção executiva.</p>
+  <div class="hero-right">
+    <img src="IMG_2112.jpeg" alt="Marcella Alves">
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Nation</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">SPFW</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Sebrae</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">y-Human</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Gestão de Projetos</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Produção Executiva</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Psicologia</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Moda & Sustentabilidade</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Mulheres em Foco</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Nation</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">SPFW</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Sebrae</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">y-Human</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Gestão de Projetos</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Produção Executiva</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Psicologia</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Moda & Sustentabilidade</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Mulheres em Foco</span><span class="marquee-sep">·</span>
+  </div>
+</div>
+
+<!-- PHOTO GRID -->
+<div id="photos">
+  <div class="photo-grid">
+    <div class="pg-cell tall">
+      <img src="1739194941772.jpeg" alt="Marcella Alves — y-Human">
+      <div class="cap">y-Human · Palestra</div>
+    </div>
+    <div class="pg-cell">
+      <img src="1744905905992.jpeg" alt="SPFW Piet">
+      <div class="cap">SPFW · Desfile Piet</div>
+    </div>
+    <div class="pg-cell">
+      <img src="IMG_2111.jpeg" alt="Nation">
+      <div class="cap">Nation · Campanha</div>
+    </div>
+    <div class="pg-cell">
+      <img src="1747836410098.jpeg" alt="BRUFW">
+      <div class="cap">BR_IFW · Rio</div>
+    </div>
+    <div class="pg-cell">
+      <img src="1744905897634.jpeg" alt="Público SPFW">
+      <div class="cap">SPFW · Pacaembu</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div>
+      <p class="s-tag reveal" data-pt="sobre" data-en="about">sobre</p>
+      <h2 class="big-title reveal">
+        Projetos,<br>operações e<br><em>estratégias</em>
+      </h2>
+    </div>
+    <div class="about-text reveal">
+      <p data-pt="Sou psicóloga de formação pelo Mackenzie, com pós-graduação em Psicologia Jurídica pela PUC-RJ, e atuo há anos na interseção entre comportamento humano, gestão de projetos e produção executiva." data-en="I hold a Psychology degree from Mackenzie and a postgraduate in Legal Psychology from PUC-RJ, working for years at the intersection of human behavior, project management, and executive production.">Sou psicóloga de formação pelo Mackenzie, com pós-graduação em Psicologia Jurídica pela PUC-RJ, e atuo há anos na interseção entre comportamento humano, gestão de projetos e produção executiva.</p>
       <p data-pt="Minha trajetória passou pelo terceiro setor, onde trabalhei com alfabetização e vulnerabilidade social no Cenpec e na Fábrica de Cultura Jaçanã. Passou pela Piet e P_Andrade, onde mergulhei no mundo da moda como assistente de CEO e produtora executiva, com responsabilidades que iam da gestão administrativa e contratos com fornecedores à produção do desfile da marca no São Paulo Fashion Week, no Estádio do Pacaembu. Passou pelo y-Human, onde a moda se somou à sustentabilidade — gerenciando projetos, palestrei em universidades de moda de São Paulo e organizei eventos em Patrimônio Histórico. E chegou à publicidade, onde hoje sou Gerente de Projetos e Operações na Nation." data-en="My path went through the third sector, working with literacy and social vulnerability at Cenpec and Fábrica de Cultura Jaçanã. Through Piet and P_Andrade, where I immersed myself in fashion as CEO assistant and executive producer — from administrative management and vendor contracts to producing the brand's runway show at São Paulo Fashion Week at Pacaembu Stadium. Through y-Human, where fashion met sustainability — managing projects, lecturing at São Paulo fashion universities, and organizing events at a Historic Heritage site. And into advertising, where I am now Project & Operations Manager at Nation.">Minha trajetória passou pelo terceiro setor, onde trabalhei com alfabetização e vulnerabilidade social no Cenpec e na Fábrica de Cultura Jaçanã. Passou pela Piet e P_Andrade, onde mergulhei no mundo da moda como assistente de CEO e produtora executiva, com responsabilidades que iam da gestão administrativa e contratos com fornecedores à produção do desfile da marca no São Paulo Fashion Week, no Estádio do Pacaembu. Passou pelo y-Human, onde a moda se somou à sustentabilidade — gerenciando projetos, palestrei em universidades de moda de São Paulo e organizei eventos em Patrimônio Histórico. E chegou à publicidade, onde hoje sou Gerente de Projetos e Operações na Nation.</p>
       <p data-pt="Em paralelo, facilito turmas do programa Mulheres em Foco, do Sebrae, trabalhando temas como comunicação assertiva, negociação, autoconfiança e tomada de decisão com empreendedoras de todo o Brasil. É um trabalho ancorado em Psicologia Grupal, e é onde mais claramente vejo o que a formação em Psicologia entrega na prática: a capacidade de criar espaço para que pessoas se reconheçam, se posicionem e avancem." data-en="In parallel, I facilitate cohorts of the Mulheres em Foco program at Sebrae, covering assertive communication, negotiation, self-confidence, and decision-making with women entrepreneurs across Brazil. Grounded in Group Psychology — where I most clearly see what a Psychology background delivers in practice: the ability to create space for people to recognize themselves and move forward.">Em paralelo, facilito turmas do programa Mulheres em Foco, do Sebrae, trabalhando temas como comunicação assertiva, negociação, autoconfiança e tomada de decisão com empreendedoras de todo o Brasil. É um trabalho ancorado em Psicologia Grupal, e é onde mais claramente vejo o que a formação em Psicologia entrega na prática: a capacidade de criar espaço para que pessoas se reconheçam, se posicionem e avancem.</p>
       <p data-pt="Escrevo com frequência sobre as conexões que encontro entre psicologia, gestão, produção e mercado de trabalho. Sobre o que move grupos. Sobre o que paralisa pessoas. Sobre mulheres e trabalho. Sobre o que acontece nos bastidores de um projeto bem executado." data-en="I write regularly about the connections I find between psychology, management, production, and the labor market. About what moves groups. About what paralyzes people. About women and work. About what happens behind the scenes of a well-executed project.">Escrevo com frequência sobre as conexões que encontro entre psicologia, gestão, produção e mercado de trabalho. Sobre o que move grupos. Sobre o que paralisa pessoas. Sobre mulheres e trabalho. Sobre o que acontece nos bastidores de um projeto bem executado.</p>
       <p data-pt="O fio condutor de tudo isso é o mesmo desde o início: entender o que está acontecendo com as pessoas em determinado contexto e criar condições para que o trabalho flua com qualidade, cuidado e resultado." data-en="The common thread through all of it has always been the same: understanding what is happening with people in a given context and creating the conditions for work to flow with quality, care, and results.">O fio condutor de tudo isso é o mesmo desde o início: entender o que está acontecendo com as pessoas em determinado contexto e criar condições para que o trabalho flua com qualidade, cuidado e resultado.</p>
-      <div class="hero-pills">
-        <span class="pill" data-pt="Facilitação de grupos" data-en="Group facilitation">Facilitação de grupos</span>
-        <span class="pill" data-pt="Dinâmica de grupo" data-en="Group dynamics">Dinâmica de grupo</span>
-        <span class="pill" data-pt="Treinamento e desenvolvimento" data-en="Training & development">Treinamento e desenvolvimento</span>
-        <span class="pill" data-pt="Comunicação interpessoal" data-en="Interpersonal communication">Comunicação interpessoal</span>
-        <span class="pill" data-pt="Pensamento estratégico" data-en="Strategic thinking">Pensamento estratégico</span>
-        <span class="pill" data-pt="Pensamento crítico" data-en="Critical thinking">Pensamento crítico</span>
-        <span class="pill" data-pt="Produção de eventos" data-en="Event production">Produção de eventos</span>
-        <span class="pill" data-pt="Ideação criativa" data-en="Creative ideation">Ideação criativa</span>
-        <span class="pill" data-pt="Criação de relacionamentos" data-en="Relationship building">Criação de relacionamentos</span>
-        <span class="pill" data-pt="Diversidade e inclusão" data-en="Diversity & inclusion">Diversidade e inclusão</span>
-        <span class="pill" data-pt="Sustentabilidade" data-en="Sustainability">Sustentabilidade</span>
-        <span class="pill" data-pt="Articulação" data-en="Articulation">Articulação</span>
-      </div>
-    </div>
-    <div class="hero-cta-group">
-      <span class="hero-location">São Paulo, SP — Brasil</span>
-      <div class="hero-btns">
-        <a href="#contact" class="btn-solid" data-pt="entrar em contato" data-en="get in touch">entrar em contato</a>
-        <a href="https://www.linkedin.com/in/marcella-alves-5ab933196/" target="_blank" class="btn-outline-dark">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          LinkedIn
-        </a>
+      <div class="about-pills">
+        <span class="pill">Facilitação de grupos</span>
+        <span class="pill">Dinâmica de grupo</span>
+        <span class="pill">Treinamento e desenvolvimento</span>
+        <span class="pill">Comunicação interpessoal</span>
+        <span class="pill">Pensamento estratégico</span>
+        <span class="pill">Produção de eventos</span>
+        <span class="pill">Impacto Social</span>
+        <span class="pill">Sustentabilidade</span>
       </div>
     </div>
   </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-inner">
-    <p class="section-tag reveal" data-pt="trajetória" data-en="experience">trajetória</p>
-    <h2 class="headline-mix reveal">
-      <em><span data-pt="onde estive" data-en="where I've been">onde estive</span></em><br>
-      <span data-pt="e o que construí" data-en="and what I built">e o que construí</span>
+    <p class="s-tag reveal" data-pt="trajetória profissional" data-en="professional experience">trajetória profissional</p>
+    <h2 class="big-title reveal">
+      <em>Onde estive</em><br>e o que construí
     </h2>
     <div class="exp-list">
+
       <div class="exp-item">
-        <div class="exp-date">Mai 2025 — <span data-pt="atual" data-en="present">atual</span></div>
+        <div class="exp-date">Jun 2025 — <span data-pt="atual" data-en="present">atual</span></div>
         <div>
           <p class="exp-co">Nation</p>
-          <h3 class="exp-role" data-pt="Gerente de Projetos e Operações" data-en="Project & Operations Manager">Gerente de Projetos e Operações</h3>
-          <p class="exp-desc" data-pt="Atuo como ponte entre planejamento e criação, agência e cliente. Acompanho todas as etapas de projetos, conecto equipes e informações, gerencio prazos e impactos — garantindo entregas que equilibram excelência criativa e eficiência operacional." data-en="I bridge planning and creation, agency and client. I follow every stage of projects, connect teams and information, manage deadlines and impact — ensuring deliveries that balance creative excellence and operational efficiency.">Atuo como ponte entre planejamento e criação, agência e cliente. Acompanho todas as etapas de projetos, conecto equipes e informações, gerencio prazos e impactos — garantindo entregas que equilibram excelência criativa e eficiência operacional.</p>
+          <h3 class="exp-role">Gerente de Projetos e Operações</h3>
+          <div class="exp-body">
+            <p>A Nation é uma agência publicitária guiada pelos pilares craft, purpose &amp; speed. Nessa função de Gerente de Projetos e Operações, atuo como ponte entre planejamento e criação, agência e cliente, garantindo fluidez nos processos, clareza nas rotinas e entregas que equilibram excelência criativa e eficiência operacional.</p>
+            <p>De forma direta, acompanho todas as etapas de projetos, conecto equipes e informações, gerencio prazos e impactos, assegurando que cada detalhe esteja alinhado e que as entregas aconteçam de forma coordenada, de acordo com boas práticas de gerenciamento de projetos.</p>
+          </div>
           <div class="exp-tags"><span class="tag">Agência Criativa</span><span class="tag">PMO</span><span class="tag">Operações</span></div>
         </div>
       </div>
-      <div class="exp-item">
-        <div class="exp-date">Set 2025 — <span data-pt="atual" data-en="present">atual</span></div>
-        <div>
-          <p class="exp-co">Sebrae</p>
-          <h3 class="exp-role" data-pt="Facilitadora — Mulheres em Foco" data-en="Facilitator — Mulheres em Foco">Facilitadora — Mulheres em Foco</h3>
-          <p class="exp-desc" data-pt="Facilitação de turmas intensivas semanais do programa Mulheres em Foco, conduzindo temas como comunicação assertiva, negociação, autoconfiança e tomada de decisão. Atuação ancorada em Psicologia Grupal, criando espaços onde cada empreendedora reflete sobre sua trajetória e desenvolve ferramentas práticas para crescimento pessoal e profissional." data-en="Facilitation of intensive weekly cohorts of the Mulheres em Foco program, covering assertive communication, negotiation, self-confidence, and decision-making. Grounded in Group Psychology, creating spaces where each entrepreneur reflects on her path and develops practical tools for personal and professional growth.">Facilitação de turmas intensivas semanais do programa Mulheres em Foco, conduzindo temas como comunicação assertiva, negociação, autoconfiança e tomada de decisão. Atuação ancorada em Psicologia Grupal, criando espaços onde cada empreendedora reflete sobre sua trajetória e desenvolve ferramentas práticas para crescimento pessoal e profissional.</p>
-          <div class="exp-tags"><span class="tag">Facilitação</span><span class="tag">Psicologia Grupal</span><span class="tag">Educação</span><span class="tag">Remoto</span></div>
-        </div>
-      </div>
+
       <div class="exp-item">
         <div class="exp-date">Jan 2024 — Abr 2025</div>
         <div>
           <p class="exp-co">PIET · P_Andrade · Mil Workshops</p>
-          <h3 class="exp-role" data-pt="Produção Executiva & Assistência de CEO" data-en="Executive Production & CEO Assistant">Produção Executiva & Assistência de CEO</h3>
-          <p class="exp-desc" data-pt="Produção executiva do desfile da Piet no SPFW em 2025, no Estádio do Pacaembu. Gestão de eventos do início ao fim: materiais, cronogramas, contratações, ingressos, negociações e contratos com fornecedores. Apoio administrativo estratégico: documentos, agendas executivas, viagens corporativas, intermédio com jurídico e áreas financeiras. Organização e análise de candidaturas para diversas áreas, condução de entrevistas e feedbacks. Manutenção de workshops presenciais: inscrições, pagamentos, materiais e comunicação com alunos." data-en="Executive production of Piet's runway show at SPFW 2025 at Pacaembu Stadium. End-to-end event management: materials, timelines, contracts, ticketing, negotiations and vendor contracts. Strategic administrative support: documents, executive schedules, corporate travel, liaison with legal and finance. Organization and review of applications for various roles, interviews and feedback. Coordination of in-person workshops: enrollment, payments, materials and student communications.">Produção executiva do desfile da Piet no SPFW em 2025, no Estádio do Pacaembu. Gestão de eventos do início ao fim: materiais, cronogramas, contratações, ingressos, negociações e contratos com fornecedores. Apoio administrativo estratégico: documentos, agendas executivas, viagens corporativas, intermédio com jurídico e áreas financeiras. Organização e análise de candidaturas para diversas áreas, condução de entrevistas e feedbacks. Manutenção de workshops presenciais: inscrições, pagamentos, materiais e comunicação com alunos.</p>
+          <h3 class="exp-role">Produção Executiva e Assistência Executiva de CEO</h3>
+          <div class="exp-body">
+            <ul>
+              <li>Produção executiva do Desfile da Piet no SPFW 25 no Estádio do Pacaembu.</li>
+              <li>Produção executiva e logística de eventos: organização de eventos, incluindo materiais, cronogramas, contratações e suporte aos participantes; gestão de site de ingressos; negociações, cotações e contratos com fornecedores e parceiros; garantia do cumprimento de prazos e execução da logística.</li>
+              <li>Apoio administrativo estratégico e assistência pessoal: elaboração e organização de documentos, registro de pautas, agendas executivas, organização de viagens corporativas e pessoais; gestão de espaços físicos de trabalho; intermédio entre gerência e jurídico externo; compras e diálogo com áreas financeiras e comerciais.</li>
+              <li>Seleção e gestão de talentos: organização e análise de currículos e portfólios de candidatos para diversas áreas, realização de entrevistas e feedbacks.</li>
+              <li>Manutenção de workshops presenciais: inscrições, controle de pagamentos, organização e compra de materiais de aula e comunicação com os alunos, além da produção de documentos e cronogramas para os cursos e eventos educacionais.</li>
+            </ul>
+          </div>
           <div class="exp-tags"><span class="tag">Moda</span><span class="tag">SPFW</span><span class="tag">Eventos</span><span class="tag">Assistência Executiva</span></div>
         </div>
       </div>
+
       <div class="exp-item">
         <div class="exp-date">Jan 2024 — Abr 2025</div>
         <div>
-          <p class="exp-co">y-Human</p>
-          <h3 class="exp-role" data-pt="Gestão de Projetos — Moda & Sustentabilidade" data-en="Project Management — Fashion & Sustainability">Gestão de Projetos — Moda & Sustentabilidade</h3>
-          <p class="exp-desc" data-pt="Palestras em universidades de moda de São Paulo, liderança das equipes do concurso, atuação como Mestre de Cerimônia e organização de eventos presenciais em Patrimônio Histórico." data-en="Lectures at São Paulo fashion universities, leadership of competing teams, MC at events, and coordination of in-person events at a Historic Heritage site.">Palestras em universidades de moda de São Paulo, liderança das equipes do concurso, atuação como Mestre de Cerimônia e organização de eventos presenciais em Patrimônio Histórico.</p>
-          <div class="exp-tags"><span class="tag">Sustentabilidade</span><span class="tag">Liderança</span><span class="tag">Eventos</span></div>
+          <p class="exp-co">y-Human (projeto de Moda e Sustentabilidade)</p>
+          <h3 class="exp-role">Planejamento e Gestão de Projetos/eventos</h3>
+          <div class="exp-body">
+            <p>Elaboração dos textos, e-mails e apresentações para parceiros e possíveis patrocinadores; elaboração de reports pós eventos; participação nas palestras realizadas em 8 universidades de Moda de São Paulo no ano de 2024; organização de agenda e cronograma do projeto, bem como dos eventos presenciais; elaboração de formulários de inscrições e regras para participação do concurso; liderança das oito equipes de Moda participantes do concurso; seleção e liderança da equipe de staff nos eventos; atuação como Mestre de Cerimônia nos eventos; preenchimento de editais; visitas técnicas.</p>
+          </div>
+          <div class="exp-tags"><span class="tag">Sustentabilidade</span><span class="tag">Liderança</span><span class="tag">Eventos</span><span class="tag">Moda</span></div>
         </div>
       </div>
+
       <div class="exp-item">
         <div class="exp-date">Mar 2021 — Dez 2023</div>
         <div>
           <p class="exp-co">Universidade de São Paulo</p>
-          <h3 class="exp-role" data-pt="Assistente de Mídias Sociais" data-en="Social Media Assistant">Assistente de Mídias Sociais</h3>
-          <p class="exp-desc" data-pt="Monitoramento e produção de conteúdo para a Biblioteca Cyro de Andrade e para a Revista Brasileira de Educação Física e Esporte. Revisão gramatical de artigos científicos." data-en="Content monitoring and production for the Cyro de Andrade Library and the Brazilian Journal of Physical Education and Sport. Proofreading of scientific articles.">Monitoramento e produção de conteúdo para a Biblioteca Cyro de Andrade e para a Revista Brasileira de Educação Física e Esporte. Revisão gramatical de artigos científicos.</p>
+          <h3 class="exp-role">Assistente de Mídias Sociais</h3>
+          <div class="exp-body">
+            <p>Monitoramento e produção de conteúdo para as redes sociais da Biblioteca Cyro de Andrade e para a Revista Brasileira de Educação Física e Esporte; correção e revisão gramatical de artigos científicos.</p>
+          </div>
           <div class="exp-tags"><span class="tag">USP</span><span class="tag">Conteúdo</span><span class="tag">Revisão</span></div>
         </div>
       </div>
+
       <div class="exp-item">
         <div class="exp-date">Jul 2020 — Mai 2021</div>
         <div>
           <p class="exp-co">Fábrica de Cultura Jaçanã</p>
-          <h3 class="exp-role" data-pt="Estagiária de Psicologia Jurídica" data-en="Legal Psychology Intern">Estagiária de Psicologia Jurídica</h3>
-          <p class="exp-desc" data-pt="Atendimento psicológico gratuito; coordenação de atividades formativas remotas com educadores sobre vulnerabilidade social, preconceitos, violências e saúde mental; promoção de inclusão social." data-en="Free psychological counseling; coordination of remote training for educators on social vulnerability, bias, violence, and mental health; promotion of social inclusion.">Atendimento psicológico gratuito; coordenação de atividades formativas remotas com educadores sobre vulnerabilidade social, preconceitos, violências e saúde mental; promoção de inclusão social.</p>
+          <h3 class="exp-role">Estagiária de Psicologia Jurídica</h3>
+          <div class="exp-body">
+            <p>Atendimento psicológico gratuito; coordenação de atividades formativas remotas com educadores da instituição sobre temas como vulnerabilidade social, preconceitos, violências e saúde mental; promoção de inclusão social.</p>
+          </div>
           <div class="exp-tags"><span class="tag">Psicologia</span><span class="tag">Inclusão Social</span></div>
         </div>
       </div>
+
       <div class="exp-item">
         <div class="exp-date">Mar 2019 — Ago 2020</div>
         <div>
           <p class="exp-co">CENPEC</p>
-          <h3 class="exp-role" data-pt="Projetos de Educação no Terceiro Setor" data-en="Education Projects — Third Sector">Projetos de Educação no Terceiro Setor</h3>
-          <p class="exp-desc" data-pt="Comunicação com secretários, coordenadores e professores municipais. Elaboração de conteúdos formativos, negociações de direitos autorais, homologação de cursos online e comunicação externa." data-en="Communication with municipal secretaries, coordinators, and teachers. Formative content development, copyright negotiations, online course accreditation, and external communications.">Comunicação com secretários, coordenadores e professores municipais. Elaboração de conteúdos formativos, negociações de direitos autorais, homologação de cursos online e comunicação externa.</p>
+          <h3 class="exp-role">Projetos de Educação no Terceiro Setor</h3>
+          <div class="exp-body">
+            <p>Comunicação direta com Secretários, coordenadores e professores municipais de São Paulo; participação em reuniões de elaboração dos conteúdos formativos, bem como nas próprias formações; negociações para contratação de direitos autorais; homologação de cursos online e conhecimento sobre ambientes virtuais de aprendizagem; comunicação externa; participação voluntária de grupos de estudos sobre raça e gênero.</p>
+          </div>
           <div class="exp-tags"><span class="tag">Terceiro Setor</span><span class="tag">Educação</span></div>
         </div>
       </div>
+
+      <div class="exp-item">
+        <div class="exp-date">Jul 2018 — Dez 2018</div>
+        <div>
+          <p class="exp-co">Laboratório de Estudos da Violência e Vulnerabilidade Social</p>
+          <h3 class="exp-role">Monitora de Psicologia</h3>
+          <div class="exp-tags"><span class="tag">Psicologia</span><span class="tag">Pesquisa</span></div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">Jan 2018 — Jul 2018</div>
+        <div>
+          <p class="exp-co">Centro para Crianças e Adolescentes Aziz Ab'Saber</p>
+          <h3 class="exp-role">Estagiária de Psicologia Social</h3>
+          <div class="exp-tags"><span class="tag">Psicologia Social</span><span class="tag">Infância</span></div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
+<!-- BASTIDORES -->
+<section id="bastidores">
+  <div class="section-inner" style="padding-bottom:2rem">
+    <p class="s-tag reveal" data-pt="bastidores · nation" data-en="behind the scenes · nation">bastidores · nation</p>
+    <h2 class="big-title reveal" style="margin-bottom:0">
+      O que acontece<br><em>por dentro</em>
+    </h2>
+  </div>
+  <div class="bast-grid">
+    <div class="bast-cell"><img src="IMG_2118.jpeg" alt="Filmagem na praia"></div>
+    <div class="bast-cell"><img src="IMG_2117.jpeg" alt="Monitor câmera"></div>
+    <div class="bast-cell"><img src="IMG_2119.jpeg" alt="Equipe praia"></div>
+    <div class="bast-cell"><img src="IMG_2115.jpeg" alt="Sala de produção"></div>
+    <div class="bast-cell"><img src="IMG_2116.jpeg" alt="Set câmera"></div>
+    <div class="bast-cell"><img src="IMG_2109.jpeg" alt="SPFW bastidores"></div>
+  </div>
+</section>
+
+<!-- WRITING -->
 <section id="articles">
   <div class="section-inner">
-    <p class="section-tag reveal" data-pt="escrita" data-en="writing">escrita</p>
-    <h2 class="headline-mix reveal">
-      <span data-pt="o que eu" data-en="what I">o que eu</span><br>
-      <em><span data-pt="penso" data-en="think">penso</span></em><br>
-      <span data-pt="e escrevo" data-en="and write">e escrevo</span>
+    <p class="s-tag reveal" data-pt="escrita" data-en="writing">escrita</p>
+    <h2 class="big-title reveal">
+      O que eu<br><em>penso</em><br>e escrevo
     </h2>
-    <p class="articles-intro reveal" data-pt="Reflexões publicadas no LinkedIn sobre psicologia, gestão, mulheres e mercado de trabalho." data-en="Reflections published on LinkedIn about psychology, management, women, and the labor market.">Reflexões publicadas no LinkedIn sobre psicologia, gestão, mulheres e mercado de trabalho.</p>
-    <div class="articles-grid">
+    <div class="articles-list">
 
-      <div class="article-item reveal" onclick="toggleArticle(this)">
-        <div class="article-header"><div>
-          <p class="article-meta">Abril 2026</p>
-          <h3 class="article-title" data-pt="O Segundo Sol e o Segundo Sexo" data-en="The Second Sun and The Second Sex">O Segundo Sol e o Segundo Sexo</h3>
-          <p class="article-excerpt">Uma reflexão sobre Simone de Beauvoir, Nando Reis e o que conecta o condicionamento feminino à ideia de transformação.</p>
-        </div><div class="article-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="article-full"><div class="article-full-inner">
-          <p>Estava lendo um livro sobre economias femininas no Brasil, uma obra que traz contribuições para pensarmos uma nova sociedade, numa realidade ainda majoritariamente estruturada em benefício dos homens.</p>
-          <p>No livro, era citado O Segundo Sexo, de Simone de Beauvoir. Ao ler um trecho sobre o livro, que trata da relação entre o desenvolvimento psicológico das mulheres e os condicionamentos da socialização em que crescemos, e como isso faz com que a mulher se torne apenas um apêndice do sexo masculino, imediatamente me veio à cabeça a música O Segundo Sol, de Nando Reis. Na minha experiência de vida, essa música ficou marcada pela voz da Cássia Eller.</p>
-          <p>O Segundo Sexo foi um dos pontapés para o acendimento dos movimentos de mulheres no mundo, muito próximo à Conferência da ONU de 1975, ano declarado como o Ano Internacional da Mulher, quando muitas pautas vieram à tona. O Segundo Sol, por sua vez, nem havia sido escrito ainda naquela época.</p>
-          <p>Fui cantando a letra mentalmente, com a página do livro ainda aberta, e fui vendo que relação havia entre o segundo sol e o segundo sexo. A música nasceu porque Nando Reis tinha uma amiga mística, esotérica, que lhe falou sobre a vinda de um segundo sol, uma teoria, uma profecia. Ele desacreditou completamente. Depois de um tempo, escreveu a música como uma reflexão, quase um pedido de desculpas pela postura de ter descartado aquela ideia.</p>
-          <p>Comecei a fazer uma relação: os astrônomos, trazendo para o mercado de trabalho, seriam aqueles que historicamente ocuparam o centro do poder. Assim como os astrônomos definem o que é legítimo, o que é verdadeiro, o que tem poder dentro da astronomia, alguns dos homens, historicamente, definiram esses mesmos parâmetros no mercado de trabalho. E a mulher, nessa lógica, nunca foi algo que as estruturas vigentes definiram como merecedora de atenção, respeito ou igualdade no mercado.</p>
-          <p>A música fala dos astrônomos tratando aquilo como "apenas um cometa". Um cometa é algo passageiro, menor que um planeta, que foge do eixo principal. Fazendo o paralelo: as mulheres seriam os cometas. Os dominantes do mercado de trabalho as enxergam assim: passageiras, periféricas, citadas de vez em quando, mas nunca como centro.</p>
-          <p>Tanto é que, em diversas entrevistas, quando alguns homens são perguntados sobre mulheres que admiram em suas profissões, a dificuldade de citar nomes é enorme. As referências femininas simplesmente não foram construídas com o mesmo peso.</p>
-          <p>Entretanto, Beauvoir não estava dizendo que as mulheres são menos. Ela estava denunciando que a sociedade as construiu como menos, e que isso não era natureza, era condicionamento. Essa distinção muda tudo. A história provou que ela estava certa. Depois de O Segundo Sexo, o movimento de mulheres ganhou força no mundo inteiro. Vieram conquistas concretas: direito ao voto garantido em mais países, acesso à educação superior, leis contra violência doméstica, representação política, presença crescente em cargos de liderança. Não foi dado, foi conquistado com muita luta. O segundo sol chegou e foi realinhando as órbitas, uma conquista de cada vez.</p>
-          <p>O que Beauvoir fez com o livro foi exatamente o que a música descreve: anunciar algo que os "astrônomos" não conseguiam ver. Desfazer a ideia de apêndice não acontece só nas leis ou nas estatísticas. Acontece por dentro. O que vejo nas mulheres do curso que facilito é que um grande obstáculo é a voz interna que diz que não é boa o suficiente, que está ocupando um espaço que não é seu, que vai ser descoberta como uma fraude a qualquer momento. Isso tem nome: síndrome da impostora. E ela não nasceu do nada, ela é o condicionamento que Beauvoir descreveu.</p>
-          <p>O trabalho, então, é construir um ponto de apoio interno. Uma legitimidade que não depende da validação dos outros. E aí Beauvoir e Nando Reis se encontram em algo. Não disseram a mesma coisa, ela escreveu um ensaio filosófico de denúncia, ele escreveu uma canção a partir de uma experiência pessoal. Mas as duas obras se conversam: onde ela nomeou o condicionamento, ele intuiu a transformação. O Segundo Sexo e O Segundo Sol, produzidos em tempos e contextos completamente diferentes, mas apontando para a mesma direção: o que foi colocado em segundo lugar não é menor. Quando uma mulher encontra esse ponto, algo muda.</p>
+      <div class="art-item reveal" onclick="toggleArt(this)">
+        <div class="art-header">
+          <div><p class="art-meta">Abril 2026</p><h3 class="art-title">O Segundo Sol e o Segundo Sexo</h3></div>
+          <div class="art-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="art-body"><div class="art-body-inner">
+          <p>Estava lendo um livro sobre economias femininas no Brasil, uma obra que traz contribuições para pensarmos uma nova sociedade, numa realidade ainda majoritariamente estruturada em benefício dos homens. No livro, era citado O Segundo Sexo, de Simone de Beauvoir. Ao ler um trecho sobre o livro, que trata da relação entre o desenvolvimento psicológico das mulheres e os condicionamentos da socialização em que crescemos, e como isso faz com que a mulher se torne apenas um apêndice do sexo masculino, imediatamente me veio à cabeça a música O Segundo Sol, de Nando Reis. Na minha experiência de vida, essa música ficou marcada pela voz da Cássia Eller.</p>
+          <p>O Segundo Sexo foi um dos pontapés para o acendimento dos movimentos de mulheres no mundo, muito próximo à Conferência da ONU de 1975, ano declarado como o Ano Internacional da Mulher. O Segundo Sol, por sua vez, nem havia sido escrito ainda naquela época. Fui cantando a letra mentalmente, com a página do livro ainda aberta, e fui vendo que relação havia entre o segundo sol e o segundo sexo.</p>
+          <p>Comecei a fazer uma relação: os astrônomos, trazendo para o mercado de trabalho, seriam aqueles que historicamente ocuparam o centro do poder. A música fala dos astrônomos tratando aquilo como "apenas um cometa" — passageiro, menor, periférico. Fazendo o paralelo: as mulheres seriam os cometas. Os dominantes do mercado de trabalho as enxergam assim: passageiras, periféricas, citadas de vez em quando, mas nunca como centro.</p>
+          <p>Entretanto, Beauvoir não estava dizendo que as mulheres são menos. Ela estava denunciando que a sociedade as construiu como menos, e que isso não era natureza, era condicionamento. A história provou que ela estava certa. O que vejo nas mulheres do curso que facilito é que um grande obstáculo é a voz interna que diz que não é boa o suficiente. Isso tem nome: síndrome da impostora. E ela não nasceu do nada — ela é o condicionamento que Beauvoir descreveu. O Segundo Sexo e O Segundo Sol, produzidos em tempos e contextos completamente diferentes, mas apontando para a mesma direção: o que foi colocado em segundo lugar não é menor. Quando uma mulher encontra esse ponto, algo muda.</p>
         </div></div>
       </div>
 
-      <div class="article-item reveal" onclick="toggleArticle(this)">
-        <div class="article-header"><div>
-          <p class="article-meta">Março 2026</p>
-          <h3 class="article-title">Episódio 1 ou episódio 0?</h3>
-          <p class="article-excerpt">Sobre a fase de concepção de projetos, o valor do tempo e as regras de condução que aprendi nas primeiras conversas.</p>
-        </div><div class="article-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="article-full"><div class="article-full-inner">
+      <div class="art-item reveal" onclick="toggleArt(this)">
+        <div class="art-header">
+          <div><p class="art-meta">Março 2026</p><h3 class="art-title">Episódio 1 ou episódio 0?</h3></div>
+          <div class="art-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="art-body"><div class="art-body-inner">
           <p>Tenho tido conversas nas últimas semanas sobre algumas iniciativas, e uma coisa que sempre fica muito clara pra mim nessa fase de concepção é o quanto uma ideia leva tempo pra existir de verdade. Não no sentido de executar, mas de entender o que ela é. São conversas que vão se desdobrando, começam de um jeito, mudam no meio, às vezes continuam dias depois; alguém traz uma referência, aparece um ponto novo, alguma coisa desloca o caminho e você precisa voltar, repensar, testar de novo.</p>
           <p>Na minha visão, esse processo sempre deixa evidente que a fase inicial pede tempo e atenção. Mais do que abrir possibilidades, é começar a entender o que faz sentido sustentar, o que ganha força a cada novo papo e o que não precisa avançar. E é justamente aí que eu me divirto mais: organizando o que ainda está solto, conectando pontos, ajudando a dar direção sem forçar uma definição antes da hora.</p>
-          <p>O tempo é importante! Não dá pra passar o carro na frente dos bois, mas, por outro lado, as coisas não podem ficar sem algum nível de amarração, porque essas conversas precisam andar. Eu dificilmente saio de um encontro sem algum tipo de encaminhamento, mesmo que provisório, mesmo que mude depois. Então, no meio disso, tem algumas coisas que eu passei a tratar como regras de condução: sair com um próximo passo com prazo definido para realização; não tentar resolver tudo em algumas horas, mas também não finalizar uma conversa da mesma forma que ela se iniciou; refinar o caminho, sem reiniciar a cada nova conversa.</p>
-          <p>No fim, é assim que eu gosto de colaborar em iniciativas que estão sendo construídas do zero.</p>
+          <p>O tempo é importante! Não dá pra passar o carro na frente dos bois, mas, por outro lado, as coisas não podem ficar sem algum nível de amarração. Então, no meio disso, tem algumas coisas que eu passei a tratar como regras de condução: sair com um próximo passo com prazo definido para realização; não tentar resolver tudo em algumas horas, mas também não finalizar uma conversa da mesma forma que ela se iniciou; refinar o caminho, sem reiniciar a cada nova conversa. No fim, é assim que eu gosto de colaborar em iniciativas que estão sendo construídas do zero.</p>
         </div></div>
       </div>
 
-      <div class="article-item reveal" onclick="toggleArticle(this)">
-        <div class="article-header"><div>
-          <p class="article-meta">Janeiro 2026</p>
-          <h3 class="article-title">O trabalho invisível das mulheres e a reprodução social</h3>
-          <p class="article-excerpt">As mulheres não estão sobrecarregadas apenas pelo trabalho remunerado somado ao doméstico — elas sustentam a roda inteira do mercado.</p>
-        </div><div class="article-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="article-full"><div class="article-full-inner">
-          <p>Existe algo que a gente quase nunca fala quando discute trabalho invisível das mulheres: as mulheres não estão sobrecarregadas apenas pelo trabalho remunerado somado ao trabalho doméstico, elas estão o tempo todo trabalhando para que a roda do mercado continue girando.</p>
-          <p>Elas cuidam de quem ainda vai trabalhar e integrar o mercado de trabalho: crianças, jovens, futuros trabalhadores. Elas cuidam de quem já não trabalha mais: idosos, aposentados, pessoas adoecidas. Elas cuidam de quem trabalha hoje. Elas visitam familiares encarcerados, com a esperança de que serão ressocializados e reinseridos no mercado de trabalho. E, ao mesmo tempo, trabalham fora de casa. E, quando voltam, trabalham dentro de casa.</p>
+      <div class="art-item reveal" onclick="toggleArt(this)">
+        <div class="art-header">
+          <div><p class="art-meta">Janeiro 2026</p><h3 class="art-title">O trabalho invisível das mulheres e a reprodução social</h3></div>
+          <div class="art-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="art-body"><div class="art-body-inner">
+          <p>Existe algo que a gente quase nunca fala quando discute trabalho invisível das mulheres: as mulheres não estão sobrecarregadas apenas pelo trabalho remunerado somado ao trabalho doméstico, elas estão o tempo todo trabalhando para que a roda do mercado continue girando. Elas cuidam de quem ainda vai trabalhar e integrar o mercado de trabalho: crianças, jovens, futuros trabalhadores. Elas cuidam de quem já não trabalha mais: idosos, aposentados, pessoas adoecidas. Elas cuidam de quem trabalha hoje. Elas visitam familiares encarcerados, com a esperança de que serão ressocializados e reinseridos no mercado de trabalho. E, ao mesmo tempo, trabalham fora de casa. E, quando voltam, trabalham dentro de casa.</p>
           <p>A perspectiva da reprodução social ajuda a enxergar isso com mais clareza: o mercado de trabalho só funciona porque alguém garante que as pessoas existam, cresçam, se mantenham vivas e minimamente cuidadas. E esse trabalho segue sendo feito majoritariamente por mulheres. O resultado é uma sobreposição constante: mulheres seguem sendo maioria no trabalho de cuidado, dentro e fora de casa, ao mesmo tempo em que enfrentam desigualdades salariais e barreiras de acesso a posições de poder no mercado de trabalho.</p>
-          <p>Esse apagamento não aconteceu por acaso. Ele tem origem em escolhas feitas dentro da própria teoria econômica. Autores centrais da economia clássica, como Alfred Marshall, ajudaram a consolidar a ideia de que só é considerado econômico aquilo que pode ser mensurado em termos monetários ou trocado no mercado. Tudo o que acontece fora dessa lógica, como o trabalho doméstico e de cuidado, passa a existir como se não tivesse valor econômico.</p>
-          <p>Pouco podemos fazer no curto prazo, porque as mudanças são lentas e esse debate é antigo. Mas é importante, ao menos, reconhecer essa lógica e continuar relembrando que ela existe. Por último: afaste-se dos Alfreds. Tem muitos por aí!</p>
-          <p class="article-note">Os pensamentos desenvolvidos aqui partem de leituras e reflexões dos autores Vogel, Picchio, Jefferson e King, apresentadas no livro Economia Feminista no Brasil. Trago com frequência tópicos sobre mulheres e mercado de trabalho porque sou facilitadora do programa Mulheres em Foco, do Sebrae, onde essas discussões surgem o tempo todo a partir das experiências reais de mulheres no mercado de trabalho.</p>
+          <p>Esse apagamento tem origem em escolhas feitas dentro da própria teoria econômica. Autores centrais da economia clássica, como Alfred Marshall, ajudaram a consolidar a ideia de que só é considerado econômico aquilo que pode ser mensurado em termos monetários. Pouco podemos fazer no curto prazo, porque as mudanças são lentas e esse debate é antigo. Mas é importante, ao menos, reconhecer essa lógica e continuar relembrando que ela existe. Por último: afaste-se dos Alfreds. Tem muitos por aí!</p>
+          <p class="note">Os pensamentos desenvolvidos aqui partem de leituras e reflexões dos autores Vogel, Picchio, Jefferson e King, apresentadas no livro Economia Feminista no Brasil. Trago com frequência tópicos sobre mulheres e mercado de trabalho porque sou facilitadora do programa Mulheres em Foco, do Sebrae.</p>
         </div></div>
       </div>
 
-      <div class="article-item reveal" onclick="toggleArticle(this)">
-        <div class="article-header"><div>
-          <p class="article-meta">Novembro 2025</p>
-          <h3 class="article-title">Psicologia Grupal no Mulheres em Foco</h3>
-          <p class="article-excerpt">Como conduzo turmas a partir da Psicologia Grupal — e os feedbacks de mulheres que passaram pelo programa.</p>
-        </div><div class="article-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="article-full"><div class="article-full-inner">
-          <div class="article-media single"><img src="1762377569051.jpeg" alt="Feedbacks Mulheres em Foco"></div>
+      <div class="art-item reveal" onclick="toggleArt(this)">
+        <div class="art-header">
+          <div><p class="art-meta">Novembro 2025</p><h3 class="art-title">Psicologia Grupal no Mulheres em Foco</h3></div>
+          <div class="art-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="art-body"><div class="art-body-inner">
+          <div class="art-media single"><img src="1762377569051.jpeg" alt="Feedbacks"></div>
           <p>"O ser humano é simultaneamente um ser sociável e um ser socializado, que aspira comunicar com os membros de uma sociedade que o forma." (Marcos Alexandre, 2002). Essa frase sempre me lembra o quanto nenhum processo de desenvolvimento acontece sozinho. Estamos sempre inseridos em grupos.</p>
           <p>É a partir da Psicologia Grupal que conduzo minhas turmas no Mulheres em Foco (Sebrae Nacional + DOT Digital Group), entendendo cada conjunto de alunas como um microgrupo humano, e criando um espaço onde cada uma se reconhece em sua singularidade e, ao mesmo tempo, se conecta na busca de objetivos compartilhados dentro de processos de desenvolvimento pessoal e também profissional.</p>
-          <p>Cada turma é um espaço pra aprender a teoria e, em seguida, testar isso na prática, com exercícios, simulações, e análises de situações reais. Os feedbacks que reuni aqui são de algumas das mulheres que passaram por temas como comunicação assertiva, formas de dar feedback, negociação, autoconfiança, tomada de decisão consciente, e muito mais.</p>
-          <p>A minha ideia, como uma das muitas facilitadoras incríveis que compõem esse projeto, é que cada mulher saia entendendo como se posicionar, sustentar uma conversa difícil, definir seus objetivos e próximos passos com clareza e comunicar o que quer sem abrir mão de quem se é. Porque não é nisso que eu acredito — acredito em autenticidade, trajetórias únicas e espaços de troca, que fortalecem os indivíduos, e então, consequentemente, fortalecem também toda uma comunidade de mulheres que buscam mais espaço no mercado de trabalho.</p>
+          <p>Cada turma é um espaço pra aprender a teoria e, em seguida, testar isso na prática, com exercícios, simulações, e análises de situações reais. A minha ideia é que cada mulher saia entendendo como se posicionar, sustentar uma conversa difícil, definir seus objetivos e próximos passos com clareza e comunicar o que quer sem abrir mão de quem se é.</p>
         </div></div>
       </div>
 
-      <div class="article-item reveal" onclick="toggleArticle(this)">
-        <div class="article-header"><div>
-          <p class="article-meta">Outubro 2025</p>
-          <h3 class="article-title">Clube de Criação: território, pertencimento e ESG</h3>
-          <p class="article-excerpt">Minha primeira vez no Clube de Criação — o painel sobre COP30 e como os pontos foram se conectando.</p>
-        </div><div class="article-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="article-full"><div class="article-full-inner">
-          <div class="article-media">
+      <div class="art-item reveal" onclick="toggleArt(this)">
+        <div class="art-header">
+          <div><p class="art-meta">Outubro 2025</p><h3 class="art-title">Clube de Criação: território, pertencimento e ESG</h3></div>
+          <div class="art-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="art-body"><div class="art-body-inner">
+          <div class="art-media">
             <img src="1760118556829.jpeg" alt="Painel COP30">
             <img src="1760118557049.jpeg" alt="Clube de Criação">
-            <img src="1760118557130.jpeg" alt="Marcella">
+            <img src="1760118557130.jpeg" alt="Evento">
           </div>
-          <p>Foi curioso entrar num espaço que, até pouco tempo atrás, nem fazia parte do meu radar. Agora que comecei a viver a publicidade de dentro, tudo parece ter um outro sentido: as conversas, os bastidores, o jeito como as ideias ganham corpo. Fui principalmente pra assistir o painel "Aquecimento COP30: seu impacto para o resto do século", que aconteceu logo pela manhã, com Luciana Haguiara (fundadora e CCO da NATION), Alice Pataxó (comunicadora indígena, embaixadora da WWF), Carolina Pasquali (diretora executiva do Greenpeace Brasil) e Ricardo Cardim (botânico e paisagista), mediados pela jornalista Claudia Tavares. Não há palavras que descrevam os aprendizados que tive com esse time tão plural, assim como os debates levantados por eles, que estão ecoando até agora na minha cabeça.</p>
-          <p>Seguindo o dia, dentre inúmeras outras possibilidades de painéis, todos muito interessantes e ricos, uma das outras mesas que acompanhei foi voltada também para sustentabilidade. Pois, ESG é um tema que já me acompanha há algum tempo: participei de projetos guiados por essa agenda e, agora, na Nation, seguimos o mesmo propósito.</p>
-          <p>E bom, tudo isso me fez recordar do primeiro curso que eu fiz voltado pra esse debate importantíssimo, o curso de Gestão e Criação de Impacto Social na USP, que, inclusive, anos atrás, foi meu primeiro contato direto com os Objetivos de Desenvolvimento Sustentável da ONU. Então, ver essa pauta sendo trazida pro centro da comunicação e publicidade me fez conectar pontos e perceber como o que aprendi antes pode agora encontrar novos formatos, novas linguagens. Um dia pra lembrar! Sobre território, pertencimento e sobre como as coisas vão se conectando no caminho.</p>
+          <p>Foi curioso entrar num espaço que, até pouco tempo atrás, nem fazia parte do meu radar. Agora que comecei a viver a publicidade de dentro, tudo parece ter um outro sentido: as conversas, os bastidores, o jeito como as ideias ganham corpo. Fui principalmente pra assistir o painel "Aquecimento COP30: seu impacto para o resto do século", com Luciana Haguiara (fundadora e CCO da NATION), Alice Pataxó (comunicadora indígena, embaixadora da WWF), Carolina Pasquali (diretora executiva do Greenpeace Brasil) e Ricardo Cardim (botânico e paisagista), mediados pela jornalista Claudia Tavares.</p>
+          <p>ESG é um tema que já me acompanha há algum tempo: participei de projetos guiados por essa agenda e, agora, na Nation, seguimos o mesmo propósito. Tudo isso me fez recordar do primeiro curso que eu fiz voltado pra esse debate: Gestão e Criação de Impacto Social, pela USP, que foi meu primeiro contato direto com os Objetivos de Desenvolvimento Sustentável da ONU. Um dia pra lembrar! Sobre território, pertencimento e sobre como as coisas vão se conectando no caminho.</p>
         </div></div>
       </div>
 
-      <div class="article-item reveal" onclick="toggleArticle(this)">
-        <div class="article-header"><div>
-          <p class="article-meta">Julho 2025</p>
-          <h3 class="article-title">O Silêncio dos Inocentes e a Psicologia que me trouxe até aqui</h3>
-          <p class="article-excerpt">De adolescente fascinada por comportamento humano à gestora de projetos — uma trajetória não linear, mas sempre coerente.</p>
-        </div><div class="article-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="article-full"><div class="article-full-inner">
-          <div class="article-media single" style="max-width:340px;"><img src="1752851387657.jpeg" alt="O Silêncio dos Inocentes"></div>
-          <p>Por volta de 2009, ainda na adolescência, eu já era completamente envolvida por histórias que exigiam leitura de comportamento, controle emocional e enfrentamento psicológico. Lia livros, assistia documentários e filmes voltados para isso. O filme "O Silêncio dos Inocentes" marcou especialmente esse meu fascínio e contextualizou muita coisa para mim.</p>
-          <p>Esse tipo de complexidade humana me instigava e foi isso que me levou à Psicologia com um objetivo claro: me tornar psicóloga forense. Cumpri o percurso com disciplina, da graduação à pós em Psicologia Jurídica. Queria realmente compreender, com profundidade e técnica, aquilo que parecia indecifrável. O plano seguia firme. Mas, no meio do caminho, outras experiências foram surgindo, e fui me envolvendo com elas de forma tão natural quanto consciente.</p>
-          <p>A Psicologia Social sempre me chamou, e esse interesse se aprofundou com minha vivência em instituições voltadas para vulnerabilidades, além de uma OSC de cultura e educação. Já no LEVV, como monitora, fazia levantamentos de projetos de lei e ações ligadas a vulnerabilidades sociais e violências, ampliando minha compreensão dos mecanismos envolvidos. Essas experiências me ensinaram o valor da escuta sensível e do reconhecimento das múltiplas vozes.</p>
-          <p>Não foi uma ruptura brusca, nem uma desistência do sonho inicial, foi um processo orgânico de descoberta. Cada novo desafio me mostrou que a Psicologia não precisa estar explícita para estar presente. Na produção cultural, na gestão de projetos e na construção de estratégias, eu encontrava espaço para usá-la como uma lente, uma maneira de compreender pessoas, contextos e dinâmicas que fazem a diferença.</p>
-          <p>Olhar para trás me mostra que sonhos não precisam seguir trajetórias lineares, e o desejo intenso de atuar na área forense foi se transformando, abrindo espaço para outras paixões. O fascínio pela complexidade humana que citei no início do texto nunca se perdeu, apenas ganhou novas formas, acompanhando as diferentes histórias, desafios e contextos que encontrei pelo percurso. Hoje, percebo que mesmo com mudanças de planos, o que aprendi e vivi continua sendo a base das minhas atuações, pois sonhos amadurecem e se reinventam, e é nesse movimento que podemos encontrar novos sentidos.</p>
-        </div></div>
-      </div>
-
-      <div class="article-item reveal" onclick="toggleArticle(this)">
-        <div class="article-header"><div>
-          <p class="article-meta">Junho 2025</p>
-          <h3 class="article-title">A trajetória não linear que faz mais sentido do que parece</h3>
-          <p class="article-excerpt">Me formei em Psicologia achando que o próximo passo seria seguir a cartilha. A vida profissional nem sempre é linear — e tudo bem.</p>
-        </div><div class="article-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="article-full"><div class="article-full-inner">
-          <div class="article-media single" style="max-width:360px;"><img src="1750344640053.jpeg" alt="Linear vs Não Linear"></div>
+      <div class="art-item reveal" onclick="toggleArt(this)">
+        <div class="art-header">
+          <div><p class="art-meta">Junho 2025</p><h3 class="art-title">A trajetória não linear que faz mais sentido do que parece</h3></div>
+          <div class="art-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="art-body"><div class="art-body-inner">
+          <div class="art-media single" style="max-width:340px"><img src="1750344640053.jpeg" alt="Linear vs Não Linear"></div>
           <p>Fez uma faculdade e achou que estava fadado a seguir só aquele caminho? Eu também pensei assim, por um tempo. Me formei em Psicologia achando que o próximo passo seria seguir a cartilha, rolou até uma pós-graduação em Psicologia Jurídica. Mas a vida profissional, quando a gente escuta de verdade, nem sempre é linear.</p>
-          <p>Ao longo dos anos, percebi que o mais valioso não era o nome do cargo, nem a área onde eu atuava, mas as habilidades que fui desenvolvendo e conectando. Saber fazer as ligações certas entre experiências tão diferentes virou uma das minhas maiores forças. Aprendi a escutar de verdade (gente e projetos); aprendi a transformar ideias em operação, e sonhos em cronogramas reais; aprendi a manter o foco no detalhe sem perder de vista o todo, e vice-versa; aprendi que o que sustenta qualquer palco é o que está fora de vista, aprendi a cuidar dos bastidores com precisão e intenção.</p>
-          <p>Foi assim que fui navegando entre planejamento e execução de projetos, moda, produção executiva, tarefas administrativas, terceiro setor, assistência de diretoria… E tudo isso me levou a uma nova área, que eu nem imaginava ser possível dentro do modelo tradicional. Hoje, estou pela primeira vez no mercado publicitário — como Gerente de Projetos e Operações. Não, eu não venho da publicidade. Mas venho da prática de cuidar do invisível que faz os processos fluírem com escuta, estratégia, ética e coerência.</p>
-          <p>Demorei a perceber, mas foi quando abracei a não linearidade da minha trajetória que tudo passou a fazer mais sentido, e me permitiu crescer com profundidade e amplitude. Vamos conversar mais sobre isso? Gostaria de ouvir sobre caminhos, aqueles que desafiaram a ordem, que não se encaixam em roteiro algum, mas têm bagagem e repertório.</p>
+          <p>Ao longo dos anos, percebi que o mais valioso não era o nome do cargo, nem a área onde eu atuava, mas as habilidades que fui desenvolvendo e conectando. Aprendi a escutar de verdade (gente e projetos); aprendi a transformar ideias em operação, e sonhos em cronogramas reais; aprendi a manter o foco no detalhe sem perder de vista o todo. Foi assim que fui navegando entre planejamento e execução de projetos, moda, produção executiva, terceiro setor, assistência de diretoria. E tudo isso me levou à publicidade — como Gerente de Projetos e Operações. Não venho da publicidade. Mas venho da prática de cuidar do invisível que faz os processos fluírem com escuta, estratégia, ética e coerência.</p>
         </div></div>
       </div>
 
-      <div class="article-item reveal" onclick="toggleArticle(this)">
-        <div class="article-header"><div>
-          <p class="article-meta">Maio 2025</p>
-          <h3 class="article-title">Psicologia Social e Produção Executiva: o simbólico nos eventos</h3>
-          <p class="article-excerpt">Como os Ritos de Passagem e a Teoria da Identidade Social transformam a experiência coletiva em eventos.</p>
-        </div><div class="article-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="article-full"><div class="article-full-inner">
-          <p>Nas últimas semanas, venho me desafiando a fazer o seguinte exercício: encontrar nas práticas da Produção Executiva nomes e conceitos que a Psicologia já estuda há décadas. Acredito que quando essas duas áreas se encontram, a experiência do público só tem a ganhar.</p>
-          <p>A Psicologia Social investiga como os indivíduos pensam, sentem e se comportam em contextos sociais, enfatizando o papel das interações e dos grupos na formação da identidade e do sentido de pertencimento. Segundo a Teoria da Identidade Social, nossa percepção de quem somos está ligada aos grupos aos quais pertencemos. Mas sentir-se parte de uma comunidade vai muito além da simples presença física, envolve o compartilhamento de valores, emoções e experiências que constroem um senso coletivo do "nós".</p>
-          <p>No contexto de eventos e projetos, esse entendimento é crucial. O produtor executivo cria não só uma organização eficiente, mas também espaços simbólicos onde as pessoas possam se reconhecer como parte de algo maior, gerando conexão real e duradoura. Esses símbolos se manifestam de forma sutil, e um ótimo exemplo é o que chamamos — na Psicologia — de Rito de Passagem: aquele momento em que, ao atravessar um portal, túnel ou entrada com som e luz diferentes, o corpo já entende que está entrando em outro universo. Esse tipo de transição marca o fim do cotidiano e o início de uma experiência coletiva. Mesmo sem palavras, ele comunica.</p>
-          <p>E aqui vai um ponto importante: pra esse gatilho ser ativado não precisa ser algo gigantesco. A psicologia está no simbólico, e o que ativa o impacto profundo não é necessariamente o tamanho ou a grandiosidade, mas a profundidade da experiência. Assim, cuidar dos aspectos simbólicos, dos rituais, do ambiente e das interações entre os participantes é o que transforma um evento em uma experiência comunitária genuína, com impacto emocional e social profundo.</p>
-          <p>Quando o produtor executivo entende e trabalha com essa dimensão simbólica, ele não está só organizando um evento. Está criando um espaço vivo, que fala diretamente ao corpo e à mente das pessoas, tornando a experiência mais rica, memorável e transformadora.</p>
+      <div class="art-item reveal" onclick="toggleArt(this)">
+        <div class="art-header">
+          <div><p class="art-meta">Maio 2025</p><h3 class="art-title">Psicologia Social e Produção Executiva: o simbólico nos eventos</h3></div>
+          <div class="art-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="art-body"><div class="art-body-inner">
+          <p>Nas últimas semanas, venho me desafiando a fazer o seguinte exercício: encontrar nas práticas da Produção Executiva nomes e conceitos que a Psicologia já estuda há décadas. Segundo a Teoria da Identidade Social, nossa percepção de quem somos está ligada aos grupos aos quais pertencemos. Sentir-se parte de uma comunidade vai muito além da simples presença física — envolve o compartilhamento de valores, emoções e experiências que constroem um senso coletivo do "nós".</p>
+          <p>No contexto de eventos e projetos, esse entendimento é crucial. O produtor executivo cria não só uma organização eficiente, mas também espaços simbólicos onde as pessoas possam se reconhecer como parte de algo maior. Esses símbolos se manifestam de forma sutil — um ótimo exemplo é o que chamamos de Rito de Passagem: aquele momento em que, ao atravessar uma entrada com som e luz diferentes, o corpo já entende que está entrando em outro universo.</p>
+          <p>E aqui vai um ponto importante: pra esse gatilho ser ativado não precisa ser algo gigantesco. A psicologia está no simbólico, e o que ativa o impacto profundo não é necessariamente o tamanho ou a grandiosidade, mas a profundidade da experiência. Quando o produtor executivo entende e trabalha com essa dimensão simbólica, ele não está só organizando um evento. Está criando um espaço vivo, que fala diretamente ao corpo e à mente das pessoas, tornando a experiência mais rica, memorável e transformadora.</p>
         </div></div>
       </div>
 
-      <div class="article-item reveal" onclick="toggleArticle(this)">
-        <div class="article-header"><div>
-          <p class="article-meta">Maio 2025</p>
-          <h3 class="article-title">Me formei em Psicologia. E foi o melhor ponto de partida.</h3>
-          <p class="article-excerpt">Mesmo sem seguir para a clínica, uso o que aprendi todos os dias — por que a Psicologia é uma forma poderosa de enxergar qualquer contexto.</p>
-        </div><div class="article-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="article-full"><div class="article-full-inner">
-          <p>Me formei em Psicologia. E talvez esse tenha sido o melhor ponto de partida que eu poderia ter escolhido. Mesmo sem seguir para a clínica, eu uso o que aprendi todos os dias, quando facilito grupos, quando lidero staffs, quando projeto experiências, quando penso comunicação, impacto social, cultura... A psicologia me treinou para a análise.</p>
-          <p>Durante um tempo, achei que minha trajetória fosse não linear. Hoje vejo que ela é coerente. Só não é óbvia. Um bom exemplo dessa não linearidade é Daniel Kahneman. Ele era psicólogo, mas ganhou o Prêmio Nobel de Economia justamente por aplicar a psicologia à tomada de decisões econômicas, um campo completamente diferente do que economistas estavam acostumados.</p>
-          <p>É essa abordagem que eu levo comigo em tudo o que faço. E é por isso que eu me movimento com tanta clareza, mesmo que, por fora, pareça múltiplo demais. Porque meu diferencial está em aplicar essas habilidades essenciais para gerar resultados reais, em qualquer contexto ou desafio.</p>
-          <p>Se você é psicólogo e atua fora do consultório, talvez ainda não tenha percebido o quanto seu background é um diferencial poderoso. Tudo o que você aprendeu pode — e deve — ser usado para abrir caminhos e gerar impacto, mesmo que seu trajeto não seja o mais esperado. O mercado precisa dessa visão ampla, analítica e profunda que só a Psicologia entrega.</p>
-        </div></div>
-      </div>
-
-      <div class="article-item reveal" onclick="toggleArticle(this)">
-        <div class="article-header"><div>
-          <p class="article-meta">Maio 2025</p>
-          <h3 class="article-title">Trabalho em equipe e conexões no backstage da produção executiva</h3>
-          <p class="article-excerpt">O que realmente transforma grandes eventos é o esforço conjunto nos bastidores — e como a comunicação une tudo.</p>
-        </div><div class="article-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="article-full"><div class="article-full-inner">
-          <p>Quando pensamos em grandes eventos, muitas vezes o que brilha é o espetáculo final: o palco, a apresentação, a parte visível. Mas o que realmente transforma esses momentos incríveis é o trabalho de equipe, o esforço conjunto nos bastidores. Como produtora executiva, aprendi que as conexões estratégicas são o que fazem a diferença!</p>
-          <p>Em minha experiência, fui desafiada a trabalhar com equipes multidisciplinares em projetos que envolvem desde a educação até a moda, sempre com a missão de criar algo inovador e significativo. Os projetos em que estive presente me ensinaram que a magia não acontece sozinha. A construção de parcerias, a confiança nas pessoas certas, e a colaboração constante são o que transformam uma ideia em realidade.</p>
-          <p>Na produção executiva, não é apenas sobre pedir, é sobre como pedir. A forma como nos comunicamos é essencial para garantir que todos estejam alinhados com as expectativas do projeto. Não é apenas impor prazos, é acompanhar as parcerias, entender as necessidades e limitações de cada envolvido, e garantir que todos caminhem juntos em direção ao objetivo final. É ter respostas rápidas e certeiras, ou ao menos buscá-las com agilidade, sempre preparada para resolver imprevistos de forma rápida e eficaz.</p>
-          <p>Além disso, é ter interesse genuíno, conhecer cada detalhe do projeto e das parcerias, se antecipar aos problemas antes que eles aconteçam. Parte da nossa responsabilidade como produtores executivos é garantir que todos estejam satisfeitos, criando um ambiente de confiança e colaboração. No final das contas, a habilidade de comunicação é o que une todos esses elementos, tornando a execução impecável e o relacionamento duradouro.</p>
-          <p>Para além das habilidades técnicas, acredito que são esses os elementos que, no backstage, fazem a diferença entre um evento bem sucedido e um que deixa a desejar. A produção executiva é o ponto de equilíbrio entre caos e organização, e saber gerenciar essas questões é fundamental para garantir que cada detalhe seja cumprido de forma harmônica.</p>
+      <div class="art-item reveal" onclick="toggleArt(this)">
+        <div class="art-header">
+          <div><p class="art-meta">Maio 2025</p><h3 class="art-title">Me formei em Psicologia. E foi o melhor ponto de partida.</h3></div>
+          <div class="art-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="art-body"><div class="art-body-inner">
+          <p>Me formei em Psicologia. E talvez esse tenha sido o melhor ponto de partida que eu poderia ter escolhido. Mesmo sem seguir para a clínica, eu uso o que aprendi todos os dias — quando facilito grupos, quando lidero staffs, quando projeto experiências, quando penso comunicação, impacto social, cultura. A psicologia me treinou para a análise.</p>
+          <p>Durante um tempo, achei que minha trajetória fosse não linear. Hoje vejo que ela é coerente. Só não é óbvia. Um bom exemplo dessa não linearidade é Daniel Kahneman. Ele era psicólogo, mas ganhou o Prêmio Nobel de Economia justamente por aplicar a psicologia à tomada de decisões econômicas — um campo completamente diferente do que economistas estavam acostumados. É essa abordagem que eu levo comigo em tudo o que faço. O mercado precisa dessa visão ampla, analítica e profunda que só a Psicologia entrega.</p>
         </div></div>
       </div>
 
@@ -511,195 +555,124 @@ footer p { font-size: 0.65rem; font-weight: 400; color: rgba(255,255,255,0.35); 
   </div>
 </section>
 
+<!-- TALKS -->
 <section id="talks">
   <div class="section-inner">
-    <p class="section-tag reveal" data-pt="palestras & eventos" data-en="talks & events">palestras & eventos</p>
-    <h2 class="headline-mix reveal">
-      <span data-pt="conversas que" data-en="conversations that">conversas que</span><br>
-      <em><span data-pt="deixaram marca" data-en="left a mark">deixaram marca</span></em>
+    <p class="s-tag reveal" data-pt="palestras & eventos" data-en="talks & events">palestras & eventos</p>
+    <h2 class="big-title reveal">
+      Conversas que<br><em>deixaram marca</em>
     </h2>
     <div class="talks-grid">
       <div class="talk-card reveal">
-        <img src="1747836410098.jpeg" alt="Brazil Immersive Fashion Week" class="talk-img">
-        <p class="talk-event">Brazil Immersive Fashion Week · Ago 2024</p>
-        <h3 class="talk-title">Um Novo Mundo: y-Human e a Consciência Regenerativa no Caos</h3>
-        <p class="talk-desc">No dia 14 de agosto, estivemos no palco Led Stage do BR_IFW com o painel "Um Novo Mundo: y-Human e a Consciência Regenerativa no Caos", com Felipe Gusta, Joy Pires, Marcella Alves, Paula Kim e Pedro Andrade. Destacamos a jornada do y-Human, sobre como promovemos a transparência e inovação através da tecnologia blockchain, considerando os problemas da cadeia têxtil e impactos ambientais, sobre como nossas conferências destacaram inovações como a rastreabilidade binária e next gen materiais, e sobre as soluções open-source geradas pelo nosso hackathon.</p>
+        <img src="1747836410098.jpeg" alt="BRUFW" class="talk-img">
+        <div class="talk-body">
+          <p class="talk-event">Brazil Immersive Fashion Week · Ago 2024 · Rio de Janeiro</p>
+          <h3 class="talk-title">Um Novo Mundo: y-Human e a Consciência Regenerativa no Caos</h3>
+          <p class="talk-desc">Painel no LED Stage do BR_IFW com Felipe Gusta, Joy Pires, Marcella Alves, Paula Kim e Pedro Andrade — sobre a jornada do y-Human, blockchain na moda e soluções open-source geradas pelo hackathon.</p>
+        </div>
       </div>
       <div class="talk-card reveal">
         <img src="Captura_de_Tela_2026-04-22_a_s_19_36_09.png" alt="Mackenzie Fashion Week" class="talk-img">
-        <p class="talk-event">Mackenzie Fashion Week · Nov 2024</p>
-        <h3 class="talk-title">Fashion and Science On-Chain: Da Blockchain à Moda</h3>
-        <p class="talk-desc">O Núcleo Fashion Law do Mackenzie realizou a 1ª edição do Mackenzie Fashion Week entre os dias 11 e 14 de novembro de 2024. Nosso painel "Fashion and Science On-Chain: Da Blockchain à Moda — Um Foco no Design Regenerativo" explorou como blockchain e IA podem transformar a indústria da moda, promovendo transparência e rastreabilidade. Discutimos o design regenerativo, o Digital Product Passport (DPP) europeu, e a jornada do y-Human como incubadora dedicada aos desafios do setor da moda brasileira. Com Joy Pires, Marcella Alves, Catarina Papa, Fabrício Takahashi e Gus Sant'ana.</p>
+        <div class="talk-body">
+          <p class="talk-event">Mackenzie Fashion Week · Nov 2024 · Campus Higienópolis</p>
+          <h3 class="talk-title">Fashion and Science On-Chain: Da Blockchain à Moda</h3>
+          <p class="talk-desc">1ª edição do Mackenzie Fashion Week sobre como blockchain e IA podem transformar a moda, promovendo transparência e rastreabilidade. Com Joy Pires, Catarina Papa, Fabrício Takahashi e Gus Sant'ana.</p>
+        </div>
       </div>
-    </div>
-
-    <div style="margin-top:5rem;">
-      <p class="section-tag" style="margin-bottom:2rem;" data-pt="y-human — momentos" data-en="y-human — moments">y-human — momentos</p>
-
-      <div class="article-item reveal" onclick="toggleArticle(this)">
-        <div class="article-header"><div>
-          <p class="article-meta">Abril 2025 · SPFW · Estádio do Pacaembu</p>
-          <h3 class="article-title">Desfile da Piet no São Paulo Fashion Week</h3>
-          <p class="article-excerpt">Produtora executiva do desfile da coleção Farmers League — encerramento do SPFW — e a ação de levar 400 estudantes gratuitamente.</p>
-        </div><div class="article-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="article-full"><div class="article-full-inner">
-          <div class="article-media">
-            <img src="1744905897634.jpeg" alt="SPFW"><img src="1744905905992.jpeg" alt="Desfile Piet"><img src="1744905906502.jpeg" alt="Backstage">
-          </div>
-          <div class="article-media">
-            <img src="1744905908501.jpeg" alt="Público"><img src="1744905908553.jpeg" alt="Modelo"><img src="1744905910808.jpeg" alt="Modelo">
-          </div>
-          <p>Na última semana, vivi um momento que representa muito do que acredito profissionalmente e pessoalmente! Como produtora executiva na PIET, participei de perto da construção do desfile da coleção Farmers League, apresentado no Estádio do Pacaembu e responsável pelo encerramento do São Paulo Fashion Week — uma conquista enorme para a marca e para nós, como equipe.</p>
-          <p>Paralelamente, como uma das integrantes do y-Human, pude colaborar com uma ação incrível: convidamos cerca de 400 alunos de universidades de moda de São Paulo para assistirem gratuitamente ao desfile. Acredito que transformar a indústria passa por proporcionar experiências reais para quem está se formando agora, acesso que muitas vezes ainda é negado para estudantes por barreiras financeiras ou estruturais.</p>
-          <p>E pra contextualizar: o y-Human é uma incubadora dedicada à regeneração do sistema da moda. Atuamos a partir dos pilares de educação, inclusão, transparência e tecnologia, promovendo encontros entre inovação e propósito. A ação com os estudantes faz parte do nosso movimento contínuo de unir teoria e prática.</p>
-          <p>Ver estudantes entrando em um espaço como um desfile da Piet, numa Semana de Moda, e receber os feedbacks super positivos sobre essa experiência reforçam nossos valores e o propósito do y-Human. Como sempre falamos: por aqui a gente une comunidades.</p>
-          <p class="article-note">Fotos: @mjapaa_photo · Agradecimentos: Mackenzie · Senac SP · Anhembi Morumbi · IED Brasil · Faculdade Santa Marcelina · USP</p>
-        </div></div>
-      </div>
-
-      <div class="article-item reveal" onclick="toggleArticle(this)">
-        <div class="article-header"><div>
-          <p class="article-meta">Abril 2025 · y-Human</p>
-          <h3 class="article-title">Reacendendo a paixão por gestão de projetos e impacto social</h3>
-          <p class="article-excerpt">Da USP ao y-Human — como experiências no terceiro setor, educação e moda sustentável se conectaram.</p>
-        </div><div class="article-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="article-full"><div class="article-full-inner">
-          <div class="article-media">
-            <img src="1739194941772.jpeg" alt="Marcella no microfone"><img src="1739194943096.jpeg" alt="Equipe y-Human"><img src="1739194943763.jpeg" alt="y-Human evento">
-          </div>
-          <p>Tudo começou com meu primeiro curso na área: Gestão e Criação de Impacto Social, pela Universidade de São Paulo (USP), feito em 2019. Esse curso foi essencial para desenvolver competências fundamentais, como comunicação, trabalho em equipe e um olhar crítico sobre como gerar mudanças reais na sociedade. Foi nesse momento que percebi a importância de alinhar meu trabalho com a criação de impacto.</p>
-          <p>Durante a pandemia de Covid-19, tive a oportunidade de colaborar em um projeto de emergência com a Fundação Tide Setubal, para auxiliar crianças em fase de alfabetização no bairro Jardim Lapenna, em São Paulo. Além disso, em projetos como o Letra Viva, do Cenpec, tive a chance de trabalhar com a metodologia de formação de rede levando alfabetização e educação infantil a municípios brasileiros. Tive contato direto com secretários, coordenadores e professores, participei de reuniões de elaboração de conteúdos formativos e estive envolvida em negociações.</p>
-          <p>Foi com esse background que entrei para o y-Human. Como produtora executiva, participei de diversas etapas essenciais, como o planejamento de agendas e cronogramas, o gerenciamento da comunicação com parceiros e patrocinadores, além da organização dos eventos presenciais e de todas as minúcias que exigem fazer um evento em um Patrimônio Histórico de São Paulo. Cada detalhe foi pensado com carinho e foco, desde a criação de apresentações até a coordenação da equipe de staff. Além disso, tive a chance de atuar como Mestre de Cerimônias, o que foi uma experiência incrível e desafiadora!</p>
-          <p>Trabalhar com uma equipe talentosa foi um aprendizado constante, e as parcerias construídas ao longo do processo me deixam extremamente orgulhosa. Acredito que, com dedicação e colaboração, podemos impactar a indústria da moda de forma mais sustentável e regenerativa.</p>
-        </div></div>
-      </div>
-
-      <div class="article-item reveal" onclick="toggleArticle(this)">
-        <div class="article-header"><div>
-          <p class="article-meta">Abril 2025 · y-Hack · Mai 2024</p>
-          <h3 class="article-title">Mestre de Cerimônia pela primeira vez</h3>
-          <p class="article-excerpt">31 de maio de 2024 — inaugurei oficialmente o y-Hack: Fashion, People and Planet como MC.</p>
-        </div><div class="article-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="article-full"><div class="article-full-inner">
-          <div class="article-media single" style="max-width:440px;"><img src="1720119781668.jpeg" alt="Cerimônia y-HACK"></div>
-          <p>Estou há alguns meses em uma jornada intensa, maravilhosa, desafiadora e muito satisfatória com a equipe do y-Human. Muito feliz por fazer parte desse projeto e de estar ao lado dos melhores! O y-Human é uma incubadora de projetos voltados pra soluções regenerativas pro mundo da moda. Somos uma equipe multidisciplinar e estamos promovendo um evento também multidisciplinar, que está na sua primeira edição, o "y-Hack: Fashion, People and Planet".</p>
-          <p>Nele, estudantes e profissionais das áreas da moda, tecnologia blockchain e web 3, estão desenvolvendo coleções de roupas que trazem com elas soluções para a cadeia produtiva da moda e para o planeta. Tendo a regeneração como o nosso principal pilar, nosso intuito é continuar conectando comunidades e criando alternativas sustentáveis que sempre serão distribuídas em código aberto.</p>
-          <p>Nessa trajetória, pude aproveitar habilidades que eu já tinha desenvolvido em outros momentos da minha carreira, mas nesse post quero destacar algo novo, que só foi possível graças à confiança depositada em mim pela minha equipe: fui Mestre de Cerimônia pela primeira vez. Dia 31 de maio de 2024, tive a honra de iniciar oficialmente o nosso evento, de forma online, e não poderia estar mais feliz e satisfeita com todo o aprendizado e oportunidades que esse projeto tem me proporcionado!</p>
-        </div></div>
-      </div>
-
-      <div class="article-item reveal" onclick="toggleArticle(this)">
-        <div class="article-header"><div>
-          <p class="article-meta">Abril 2025 · Maratona de Palestras</p>
-          <h3 class="article-title">Maratona nas universidades de moda de SP</h3>
-          <p class="article-excerpt">Anhembi Morumbi, Belas Artes, Link School, USP e mais — divulgando o y-Hack nas faculdades.</p>
-        </div><div class="article-toggle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="article-full"><div class="article-full-inner">
-          <div class="article-media">
-            <img src="1715699318984__1_.jpeg" alt="Palestra Anhembi"><img src="1716234502736__1_.jpeg" alt="Palestra universidades">
-          </div>
-          <p>Na última semana, demos início à maratona de palestras para divulgação do primeiro evento da nossa incubadora: o y-Human, e a primeira parada foi a Universidade Anhembi Morumbi! Conheça o "y-Hack: Fashion, people and planet", uma competição, em forma de hackathon, que irá desafiar equipes multidisciplinares de Moda e Tecnologia (Web 3 e Blockchain) a criarem coleções de roupas que contenham soluções regenerativas para a cadeia produtiva têxtil e para o planeta.</p>
-          <p>Dando sequência à maratona, nos últimos dias estivemos presentes em mais algumas universidades de São Paulo: Centro Universitário Belas Artes de São Paulo, Link School e Universidade de São Paulo. Durante dois meses, os grupos que tiverem os seus pré-projetos selecionados, irão trabalhar de forma híbrida: online e em prol dessa solução; e presencial com dois encontros, na Central 1926, para palestras e mentorias com especialistas nos temas, e também para reuniões em grupo.</p>
-          <p>Ao final da competição, o projeto selecionado será incubado pela Mil workshops e pela PIET, com todo o lucro revertido para a equipe vencedora, que também irá receber bolsas de estudos! Esperamos vocês, alunos e profissionais da Moda e da Tecnologia!</p>
-        </div></div>
-      </div>
-
     </div>
   </div>
 </section>
 
+<!-- EDUCATION -->
 <section id="education">
   <div class="section-inner">
-    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:8rem;align-items:start;">
-      <div>
-        <p class="section-tag reveal" data-pt="formação" data-en="education">formação</p>
-        <h2 class="headline-mix reveal">
-          <span data-pt="a base que" data-en="the foundation">a base que</span><br>
-          <em><span data-pt="sustenta" data-en="sustains">sustenta</span></em><br>
-          <span data-pt="tudo" data-en="everything">tudo</span>
-        </h2>
+    <div>
+      <p class="s-tag reveal" data-pt="formação" data-en="education">formação</p>
+      <h2 class="big-title reveal">
+        <em>A base</em><br>que sustenta<br>tudo
+      </h2>
+    </div>
+    <div class="edu-stack">
+      <div class="edu-card">
+        <p class="edu-year">Ago 2022 — Dez 2023</p>
+        <h3 class="edu-degree" data-pt="Pós-Graduação em Psicologia Jurídica" data-en="Postgraduate in Legal Psychology">Pós-Graduação em Psicologia Jurídica</h3>
+        <p class="edu-school">PUC — Rio de Janeiro</p>
       </div>
-      <div class="edu-grid" style="margin-top:0;align-self:center;">
-        <div class="edu-card">
-          <p class="edu-year">Ago 2022 — Dez 2023</p>
-          <h3 class="edu-degree" data-pt="Pós-Graduação em Psicologia Jurídica" data-en="Postgraduate in Legal Psychology">Pós-Graduação em Psicologia Jurídica</h3>
-          <p class="edu-school">PUC — Rio de Janeiro</p>
-        </div>
-        <div class="edu-card">
-          <p class="edu-year">Fev 2015 — Jun 2021</p>
-          <h3 class="edu-degree" data-pt="Graduação em Psicologia" data-en="Bachelor's in Psychology">Graduação em Psicologia</h3>
-          <p class="edu-school">Universidade Presbiteriana Mackenzie — São Paulo</p>
-        </div>
+      <div class="edu-card">
+        <p class="edu-year">Fev 2015 — Jun 2021</p>
+        <h3 class="edu-degree" data-pt="Graduação em Psicologia" data-en="Bachelor's in Psychology">Graduação em Psicologia</h3>
+        <p class="edu-school">Universidade Presbiteriana Mackenzie — São Paulo</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
   <div class="section-inner">
-    <p class="section-tag reveal" data-pt="competências" data-en="skills">competências</p>
-    <h2 class="headline-mix reveal">
-      <span data-pt="o que eu" data-en="what I">o que eu</span><br>
-      <em><span data-pt="trago" data-en="bring">trago</span></em><br>
-      <span data-pt="comigo" data-en=".">comigo</span>
+    <p class="s-tag reveal" data-pt="habilidades e competências" data-en="skills">habilidades e competências</p>
+    <h2 class="big-title reveal">
+      O que eu<br><em>trago</em><br>comigo
     </h2>
-    <div class="skills-cols reveal">
-      <div class="skill-group">
-        <h3 data-pt="Gestão & Operações" data-en="Management & Operations">Gestão & Operações</h3>
-        <ul class="skill-list">
-          <li data-pt="Gestão de projetos" data-en="Project management">Gestão de projetos</li>
-          <li data-pt="Produção executiva" data-en="Executive production">Produção executiva</li>
-          <li data-pt="Gestão de prazos e impactos" data-en="Deadline & impact management">Gestão de prazos e impactos</li>
-          <li data-pt="Facilitação de grupos" data-en="Group facilitation">Facilitação de grupos</li>
-          <li data-pt="Pacote Office" data-en="Microsoft Office Suite">Pacote Office</li>
+    <div class="skills-grid reveal">
+      <div class="sk-group">
+        <h3>Gestão & Operações</h3>
+        <ul class="sk-list">
+          <li>Organização</li>
+          <li>Agilidade</li>
+          <li>Estratégia</li>
+          <li>Senso de urgência</li>
+          <li>Desenvolvimento organizacional</li>
+          <li>Habilidades analíticas</li>
+          <li>Pacote Office</li>
         </ul>
       </div>
-      <div class="skill-group">
-        <h3 data-pt="Pessoas & Comunicação" data-en="People & Communication">Pessoas & Comunicação</h3>
-        <ul class="skill-list">
-          <li data-pt="Liderança de equipes" data-en="Team leadership">Liderança de equipes</li>
-          <li data-pt="Comunicação estratégica" data-en="Strategic communication">Comunicação estratégica</li>
-          <li data-pt="Escuta ativa" data-en="Active listening">Escuta ativa</li>
-          <li data-pt="Habilidades analíticas" data-en="Analytical skills">Habilidades analíticas</li>
-          <li data-pt="Trabalho em equipe" data-en="Teamwork">Trabalho em equipe</li>
+      <div class="sk-group">
+        <h3>Pessoas & Comunicação</h3>
+        <ul class="sk-list">
+          <li>Comunicação</li>
+          <li>Trabalho em equipe</li>
+          <li>Autonomia</li>
+          <li>Adaptabilidade</li>
+          <li>Criatividade</li>
+          <li>Facilitação de grupos</li>
+          <li>Liderança</li>
         </ul>
       </div>
-      <div class="skill-group">
-        <h3 data-pt="Perfil & Idiomas" data-en="Profile & Languages">Perfil & Idiomas</h3>
-        <ul class="skill-list">
-          <li data-pt="Organização e agilidade" data-en="Organization & agility">Organização e agilidade</li>
-          <li data-pt="Criatividade e adaptabilidade" data-en="Creativity & adaptability">Criatividade e adaptabilidade</li>
-          <li data-pt="Autonomia e senso de urgência" data-en="Autonomy & urgency">Autonomia e senso de urgência</li>
-          <li data-pt="Inglês intermediário" data-en="Intermediate English">Inglês intermediário</li>
-          <li data-pt="Espanhol básico" data-en="Basic Spanish">Espanhol básico</li>
+      <div class="sk-group">
+        <h3>Idiomas</h3>
+        <ul class="sk-list">
+          <li>Português — Nativo</li>
+          <li>Inglês — Intermediário</li>
+          <li>Espanhol — Básico</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
-    <div class="contact-left reveal">
-      <p class="section-tag" data-pt="contato" data-en="contact">contato</p>
-      <h2 class="headline-mix">
-        <em><span data-pt="vamos" data-en="let's">vamos</span></em><br>
-        <span data-pt="conversar?" data-en="talk?">conversar?</span>
+    <div class="reveal">
+      <p class="s-tag" data-pt="contato" data-en="contact">contato</p>
+      <h2 class="big-title">
+        <em>Vamos</em><br>conversar?
       </h2>
-      <p data-pt="Entre em contato pelo canal que preferir." data-en="Reach out through whichever channel you prefer.">Entre em contato pelo canal que preferir.</p>
+      <p class="contact-p" data-pt="Aberta a novas oportunidades em gestão de projetos, operações e produção executiva." data-en="Open to new opportunities in project management, operations, and executive production.">Aberta a novas oportunidades em gestão de projetos, operações e produção executiva.</p>
     </div>
-    <div class="contact-cards reveal">
-      <a href="mailto:contato.marcejja@gmail.com" class="contact-card">
-        <div class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></div>
-        <div><p class="cc-label">Email</p><p class="cc-value">contato.marcejja@gmail.com</p></div>
+    <div class="c-cards reveal">
+      <a href="mailto:contato.marcejja@gmail.com" class="c-card">
+        <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--white)" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="M2 7l10 7 10-7"/></svg></div>
+        <div><p class="c-label">Email</p><p class="c-val">contato.marcejja@gmail.com</p></div>
       </a>
-      <a href="tel:+5511994318398" class="contact-card">
-        <div class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
-        <div><p class="cc-label" data-pt="Telefone" data-en="Phone">Telefone</p><p class="cc-value">(11) 99431-8398</p></div>
+      <a href="tel:+5511992223675" class="c-card">
+        <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--white)" stroke-width="1.5"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+        <div><p class="c-label" data-pt="Telefone" data-en="Phone">Telefone</p><p class="c-val">(11) 99222-3675</p></div>
       </a>
-      <a href="https://www.linkedin.com/in/marcella-alves-5ab933196/" target="_blank" class="contact-card">
-        <div class="cc-icon"><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
-        <div><p class="cc-label">LinkedIn</p><p class="cc-value">marcella-alves</p></div>
+      <a href="https://www.linkedin.com/in/marcella-alves-5ab933196/" target="_blank" class="c-card">
+        <div class="c-icon"><svg viewBox="0 0 24 24" fill="var(--white)"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+        <div><p class="c-label">LinkedIn</p><p class="c-val">marcella-alves</p></div>
       </a>
     </div>
   </div>
@@ -711,31 +684,19 @@ footer p { font-size: 0.65rem; font-weight: 400; color: rgba(255,255,255,0.35); 
 </footer>
 
 <script>
-function setLang(lang) {
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-  document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
-  document.querySelectorAll('[data-pt]').forEach(el => {
-    const val = el.getAttribute('data-' + lang);
-    if (val) el.innerHTML = val;
-  });
-  document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+function setLang(l){
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelector(`.lang-btn[onclick="setLang('${l}')"]`).classList.add('active');
+  document.querySelectorAll('[data-pt]').forEach(el=>{const v=el.getAttribute('data-'+l);if(v)el.innerHTML=v});
+  document.documentElement.lang=l==='pt'?'pt-BR':'en';
 }
-function toggleArticle(item) {
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.article-item.open').forEach(i => {
-    i.classList.remove('open');
-    i.querySelector('.article-full').style.maxHeight = '0';
-  });
-  if (!isOpen) {
-    item.classList.add('open');
-    const full = item.querySelector('.article-full');
-    full.style.maxHeight = full.scrollHeight + 'px';
-  }
+function toggleArt(item){
+  const open=item.classList.contains('open');
+  document.querySelectorAll('.art-item.open').forEach(i=>{i.classList.remove('open');i.querySelector('.art-body').style.maxHeight='0'});
+  if(!open){item.classList.add('open');const b=item.querySelector('.art-body');b.style.maxHeight=b.scrollHeight+'px'}
 }
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.06 });
-document.querySelectorAll('.reveal, .exp-item, .edu-card, .talk-card, .article-item').forEach(el => io.observe(el));
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:0.06});
+document.querySelectorAll('.reveal,.exp-item,.edu-card,.talk-card,.art-item').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
